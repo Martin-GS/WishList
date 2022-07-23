@@ -4,7 +4,7 @@
 
 WishList est une application web optimisée pour les appareils mobiles (mobile-first). Elle permet de créer des listes d’articles et d'importer leurs données depuis les sites marchands.
 
-Application développée, en principe, pour un projet de fin d'études. Équipe de quatre développeurs (deux Back-End et deux Fropnt-End).
+Application développée, en principe, pour un projet de fin d'études. Équipe de quatre développeurs (deux Back-End et deux Front-End).
 
 ---
 

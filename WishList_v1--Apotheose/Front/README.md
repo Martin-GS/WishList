@@ -2,12 +2,7 @@
 
 ## Note
 
-> ⚠️ Cette version de l'application (v1) n'a été publiée que pour montrer l'avancement de mon apprentissage/perfectionnement ; pour cela son code doit servir **uniquement** comme point de comparaison avec les versions 2 et 3. Pour plus d'informations se référer au fichier [README.md](../../README.md) à la racine du projet.
-
-## Description
-
-- développé par [Martin-GS](https://github.com/Martin-GS) et [Nicolas Benzadon](https://github.com/NicolasBNZ)
-- Technos : HTML, CSS, JavaScript, Sass/SCSS, React, React-Router, Axios, etc.
+> ⚠️ Cette version de l'application (v1) a été publiée pour montrer l'avancement de mon apprentissage/perfectionnement ; pour cela son code doit servir **uniquement** comme point de comparaison avec les versions 2 et 3. Pour plus d'informations se référer au fichier [README.md](../../README.md) à la racine du projet.
 
 ## Technos & Outils
 
@@ -18,7 +13,7 @@
 - [ReactDOM](https://fr.reactjs.org/docs/react-dom.html) (injection des composants React dans le DOM)
 - [prop-types](https://github.com/facebook/prop-types) (validation de props au sein du JSX)
 - [React-Router](https://reactrouter.com/) (bibliothèque de routage (routing) standard)
-- React-Modele
+- Modèle React "École"
 - [ESLint](https://eslint.org/) (linter / analyse de code)
 - [Babel](https://babeljs.io/) (transcompilateur / rétrocompatibilité de code)
 - [Webpack](https://webpack.js.org/) (packageur de modules et ressources)
