@@ -1,4 +1,8 @@
-# WishList CLient v1 : Apothéose
+# WishList : Client v1 : Apothéose
+
+## Note
+
+> ⚠️ Cette version de l'application (v1) n'a été publiée que pour montrer l'avancement de mon apprentissage/perfectionnement ; pour cela son code doit servir **uniquement** comme point de comparaison avec les versions 2 et 3. Pour plus d'informations se référer au fichier [README.md](../../README.md) à la racine du projet.
 
 ## Description
 
@@ -14,7 +18,7 @@
 - [ReactDOM](https://fr.reactjs.org/docs/react-dom.html) (injection des composants React dans le DOM)
 - [prop-types](https://github.com/facebook/prop-types) (validation de props au sein du JSX)
 - [React-Router](https://reactrouter.com/) (bibliothèque de routage (routing) standard)
-- [React-Modele](https://github.com/O-clock-Quill/React-modele) (modèle React fourni par École O'Clock)
+- React-Modele
 - [ESLint](https://eslint.org/) (linter / analyse de code)
 - [Babel](https://babeljs.io/) (transcompilateur / rétrocompatibilité de code)
 - [Webpack](https://webpack.js.org/) (packageur de modules et ressources)
@@ -39,3 +43,7 @@
 5. $ `yarn build`
 6. $ `vercel`
 7. Suivre les étapes (bien indiquer le dossier dist/ comme dossier de déploiement)
+
+## Preview
+
+![preview](./doc/preview.png)

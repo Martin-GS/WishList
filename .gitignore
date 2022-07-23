@@ -1,5 +1,8 @@
-# Personnal
+# Mine
 secret.md
+dist/
+.DS_Store
+Thumbs.db
 
 # Logs
 logs

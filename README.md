@@ -46,7 +46,7 @@ Les différentes versions de l'application ont été publiées pour montrer l'av
 
 ### WishList v2 : Titre Pro
 
-![Preview WishList v1](./WishList_Client_v3--Titre_Pro/doc/preview.png)
+![Preview WishList v1](./WishList_v2--Titre_Pro/doc/preview.png)
 
 ### WishList v3 : Clean code
 

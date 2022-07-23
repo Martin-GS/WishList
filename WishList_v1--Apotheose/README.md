@@ -1,4 +1,4 @@
-# WishList Back (API) et Front (Client) v1 : Apothéose
+# WishList : Back (API) et Front (Client) v1 : Apothéose
 
 ## Note
 
