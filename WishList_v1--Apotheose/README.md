@@ -2,33 +2,20 @@
 
 ## Introduction
 
-WishList est une application web responsive, optimisée pour les mobiles (mobile-first) permettant de créer des listes d’articles/items en important leurs données depuis les sites marchands.
+WishList est une application web responsive, optimisée pour les mobiles (mobile-first), permettant de créer des listes d’articles/items en important leurs données depuis les sites marchands.
 
 ---
 
 ## Versions
 
-> ⚠️ Important : cette version de l'application (v1) n'a été publiée que pour montrer l'avancement de mon apprentissage/perfectionnement ; pour cela son code doit servir **uniquement** comme point de comparaison avec les versions 2 et 3 :
-
-### Client
-
-- **[WishList : client v1 : Apothéose](https://github.com/Martin-GS/WishList_Client_v1--Apotheose)** (celle-ci)
-  - Avril -> Mai 2021
-  - application développée avec [Nicolas Benzadon](https://github.com/NicolasBNZ).
-  - application développée pour un projet de fin d'études (École O'Clock)
-  - Technos : HTML, CSS, Sass, JavaScript, React, React-Router, Axios.
-- **[WishList : client v2 : Titre Pro](https://github.com/Martin-GS/WishList_Client_v2--Titre_Pro )**
-  - Mai -> Juillet 2021
-  - Reprise, révision et optimisation du code.
-  - Ligne graphique changée. Implémentation du framework Bootstrap.
-- **[WishList : client v3 : Clean code](https://github.com/Martin-GS/WishList_Client_v3--Clean_code )**
-  - Juillet 2022
-  - Reprise, révision et optimisation du code.
-  - Correction de bugs et de certaines fonctionnalités (login, cycle de vie des composants, etc).
+> ⚠️ Important : cette version de l'application (v1) n'a été publiée que pour montrer l'avancement de mon apprentissage/perfectionnement ; pour cela son code doit servir **uniquement** comme point de comparaison avec les versions 2 et 3. Pour plus d'informations se référer au fichier [README.md](../README.md) à la racine du projet.
 
 ### API
 
-- [WishList : API v1 : Apothéose](https://github.com/O-clock-Quill/projet-25-wishlist) : développée par [Nicolas Bernard](https://github.com/Nicolas-B06) et [Thomas Paulo](https://github.com/gibsonshelby), et déployée sur [Heroku](https://onedream-onewish.herokuapp.com)
+- [Front](./Front/) : Client WishList développé par [Martin-GS](https://github.com/Martin-GS) et [Nicolas Benzadon](https://github.com/NicolasBNZ).
+- [Front](./Back/) :  : API WishList développée par [Nicolas Bernard](https://github.com/Nicolas-B06) et [Thomas Paulo](https://github.com/gibsonshelby), et déployée sur [Heroku](https://onedream-onewish.herokuapp.com)
+
+- Dépôt originel : [cette adresse](https://github.com/O-clock-Quill/projet-25-wishlist)
 
 ---
 
