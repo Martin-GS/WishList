@@ -1,0 +1,8 @@
+%syntax-version=1.0.0
+%project=wishlist
+
+creationTables 2021-05-06T10:05:07Z Etudiant O'clock <student@teleporter> # création des tables
+timeTrigger 2021-05-08T12:56:16Z Etudiant O'clock <student@teleporter> # ajout d'un trigger pour updatedAt
+alterTableItemImg 2021-05-25T14:11:53Z Etudiant O'clock <student@teleporter> # modification de la table item avec ajout colonne image_url
+api/insert 2021-05-06T10:59:16Z Etudiant O'clock <student@teleporter> # ajout d'une fonction d'insertion
+api/update 2021-05-11T18:46:30Z Etudiant O'clock <student@teleporter> # ajout des fonctions UPDATE

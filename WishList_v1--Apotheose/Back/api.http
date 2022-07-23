@@ -1,0 +1,103 @@
+### GET allitems
+GET http://localhost:5555/v1/items
+
+### Get all lists 
+GET https://onedream-onewish.herokuapp.com/lists
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTYyMTQxNjA0OCwiZXhwIjoxNjIxNTg4ODQ4fQ.U8eK_G6_dkeLF1-HQ0fFsd78sR6SidXTP2xxURoJB7I
+
+### Get one list by id with his items
+GET https://onedream-onewish.herokuapp.com/lists/1
+
+### Une list avec autre chose qu'une id
+GET http://localhost:5442/list/15?withItems=true
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTYyMTQxNjA0OCwiZXhwIjoxNjIxNTg4ODQ4fQ.U8eK_G6_dkeLF1-HQ0fFsd78sR6SidXTP2xxURoJB7I
+
+
+### Create a list with user id
+POST http://localhost:5555/lists
+lhost:5555/lists
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTYyMTk1NDA1MSwiZXhwIjoxNjIyMTI2ODUxfQ.aiVa_3p_8lS42KSR5FQGmLKA8z3QOZps79pML43I-3M
+Content-Type: application/json
+
+{
+    "title": "test",
+    "coment": "test"
+}
+
+### update a list by his id
+PUT https://onedream-onewish.herokuapp.com/lists/15?withItems=true
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTYyMTQxNjA0OCwiZXhwIjoxNjIxNTg4ODQ4fQ.U8eK_G6_dkeLF1-HQ0fFsd78sR6SidXTP2xxURoJB7I
+Content-Type: application/json
+
+{
+    "title": "Max",
+    "coment": "Ajoutez des cadeaux"    
+}
+
+### delete a list by his id
+GET http://localhost:5442/list/delete/51
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTYyMTM2NzAxNiwiZXhwIjoxNjIxNTM5ODE2fQ.ayf65WZWSE5CdppkWsv9XNNvU0gSPX33bg28wi0nar8
+### create user 
+POST http://localhost:5555/user
+Content-Type: application/json
+
+{
+    "pseudo":"mlf",
+    "password":"plf",
+    "email":"mlf@gmail.com"
+}
+
+### create user 
+POST https://onedream-onewish.herokuapp.com/user
+Content-Type: application/json
+
+{
+    "pseudo":"Exemple",
+    "password":"exemple",
+    "email":"exemple@exemple.com"
+
+}
+
+### Log an user
+POST https://onedream-onewish.herokuapp.com/login
+Content-Type: application/json
+
+{ 
+    "password":"exemple",
+    "email":"exemple@exemple.com"
+}
+
+### Log an user
+POST http://localhost:5555/login
+Content-Type: application/json
+
+{ 
+    "password":"exemple",
+    "email":"exemple@exemple.com"
+}
+
+### Create an item
+POST http://localhost:5555/list/1?withItems=true
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTYyMTk1MzA3NSwiZXhwIjoxNjIyMTI1ODc1fQ.6rcxliYC2h0u-KBdWqkRnh6kqI-qz2-FC_IAOCnHrNQ
+Content-Type: application/json
+
+{
+    "title":"Exemple",
+    "url":"",
+    "coment":"Text exemple"     
+}
+
+### Update an item
+PUT http://localhost:5555/list/1/item/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTYyMTk1MzA3NSwiZXhwIjoxNjIyMTI1ODc1fQ.6rcxliYC2h0u-KBdWqkRnh6kqI-qz2-FC_IAOCnHrNQ
+Content-Type: application/json
+
+{
+    "title":"Exemple",
+    "url":"https://www.boulanger.com/ref/8007015",
+    "coment":"Text exemple"
+
+}
+
+### Delete an item from a list
+GET http://localhost:5442/list/2/item/6/delete
