@@ -1,0 +1,6 @@
+@use '../../styles/vars';
+
+.app {
+  font-family: vars.$global-font;
+  color: vars.$global-color-dark;
+};

@@ -1,0 +1,137 @@
+// Import packages/modules
+import React, { useState } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap';
+import axios from 'axios';
+
+// Import others
+import { getToken } from '../../utils/auth';
+
+// Import stylesheet
+import './lists.scss';
+
+// Component
+const CreateList = () => {
+  // States
+  const [data, setData] = useState(null);
+  const [title, setTitle] = useState('');
+  const [coment, setComent] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+    const token = getToken();
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+
+    setLoading(true);
+    setIsError(false);
+
+    const data = {
+      title: title,
+      coment: coment,
+    };
+
+    axios.post('https://onedream-onewish.herokuapp.com/lists', data,{
+      headers: {'Authorization': `Bearer ${token}`},
+    })
+      .then((res) => {
+        setData(res.data);
+        setTitle('');
+        setComent('');
+      })
+      .catch((err) => {
+        setIsError(true);
+      }).finally(() => {
+        setLoading(false);
+      });
+  };
+
+  if (data) {
+    return <Redirect to="/lists" />;
+  }
+
+  return (
+
+    <div className="createlist">
+
+      {/* Page title */}
+
+      <div className="row">
+        <div className="col text-center">
+          <h2>Nouvelle liste</h2>
+        </div>
+      </div>
+
+      {/* New list form */}
+
+      <div className="row mx-auto">
+
+        <div className="col d-none d-lg-block">&nbsp;</div>
+
+        <div className="col col-lg-6">
+
+          <Form className="form">
+
+            <Form.Group className="my-4">
+              <Form.Label>Titre</Form.Label>
+              <Form.Control
+                type="text"
+                className="input"
+                id="title"
+                placeholder="Titre..."
+                value={title}
+                onChange={evt => setTitle(evt.target.value)}
+              />
+              <Form.Text className="text-muted">
+                45 caractères maximum
+              </Form.Text>
+            </Form.Group>
+
+            <Form.Group className="my-4">
+              <Form.Label>Commentaire</Form.Label>
+              <Form.Control
+                type="text"
+                className="input"
+                id="coment"
+                placeholder="Commentaire..."
+                value={coment}
+                onChange={(evt) => setComent(evt.target.value)}
+              />
+              <Form.Text className="text-muted">
+                255 caractères maximum
+              </Form.Text>
+            </Form.Group>
+
+            { isError && <span className="createlist-form-error">Il y a eu une erreur.</span> }
+
+            <div className="row">
+              <div className="col text-center">
+                <Link to="/lists">
+                  <Button className="btn btn-primary text-white shadow my-4" variant="primary" type="button">
+                    Annuler
+                  </Button>
+                </Link>
+              </div>
+              <div className="col text-center">
+                <Button className="btn btn-primary text-white shadow my-4" variant="primary" type="submit" onClick={handleSubmit} disabled={loading}>
+                  {loading ? 'Loading...' : 'Valider'}
+                </Button>
+              </div>
+            </div>
+
+          </Form>
+
+        </div>
+
+        <div className="col d-none d-lg-block">&nbsp;</div>
+
+      </div>
+
+    </div>
+
+  );
+};
+
+// Export component
+export default CreateList;
