@@ -41,4 +41,4 @@
 
 ## Preview
 
-![preview](./doc/preview.png)
+![preview](../../doc/preview_v1.png)

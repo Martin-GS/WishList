@@ -1,6 +1,4 @@
-# 5.2. Carnet de bord
-
-## Journal personnel : Martin Goizueta
+# Carnet de bord : Journal personnel : Martin GS
 
 - __Sprint 0__ : _du 27/04 au 04/05_
   - 27/04/2021 : Day 01 : [Lancement... (Slides + premiers pas Cahier des charges)](https://github.com/Martin-GS/WishList_Client_v1--Aphotheose/blob/main/carnet_de_bord_personnel/documents_and_images/D01.md)

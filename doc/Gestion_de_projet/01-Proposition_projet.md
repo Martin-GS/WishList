@@ -1,6 +1,6 @@
-#  O-clock / Quill / Projects / WishList #25
+#  Proposition du projet WishList (#25)
 
-12 Apr 2021 - [https://github.com/O-clock-Quill/Projects/issues/25](https://github.com/O-clock-Quill/Projects/issues/25)
+12/04/2021 - [https://github.com/O-clock-Quill/Projects/issues/25](https://github.com/O-clock-Quill/Projects/issues/25)
 
 ## Que voulez-vous faire ?
 
@@ -14,7 +14,7 @@ On a tous reçu un cadeaux d'anniversaire/Noël qu'on n'a jamais utilisé.
 
 On est tous revenus d'un jour de shopping, après une journée de marche, de files d'attente, d'essayages, et s'est rendu compte qu'on a oublié quelque chose.
 
-Sans oublier ces veilles de Noël (ou d'anniversaire) où on a essayé désespérément (et la plupart du temps sans succès) de trouver LE cadeau qui ferait plaisir à notre chéri.e/enfant/papa/maman/ami.e... 
+Sans oublier ces veilles de Noël (ou d'anniversaire) où on a essayé désespérément (et la plupart du temps sans succès) de trouver LE cadeau qui ferait plaisir à notre chéri.e/enfant/papa/maman/ami.e...
 
 Ou les soirs où on revient du supermarché... sans le dentifrice, le sel ou le papier WC ! ^^
 
@@ -105,7 +105,7 @@ Chez nous on a crée 2 listes sur l'app **_Google Keep_**, qu'on a partagées av
 
 Dans la première liste, qu'on nommera **WishList** tout court  nous mettons :
 
-- les articles qu'on trouve en magasin ou sur internet qui nous plaisent (avec les liens respectifs si possible) 
+- les articles qu'on trouve en magasin ou sur internet qui nous plaisent (avec les liens respectifs si possible)
 MAIS aussi :
 - les livres qu'on demande aux enfants à l'école,
 - les vêtements de sports pour les activités

@@ -31,8 +31,16 @@
 
 ### Ajouter Bootstrap au projet
 
+<!-- ! Nécessaire ? -->
+
+1. Dans le dossier du projet $ `yarn add bootstrap`
+2. dans **src/components/App/index.js** importer Bootstrap : `import 'bootstrap/dist/css/bootstrap.min.css`
+3. ensuite on pourra ajouter les classes Bootstrap dans nos différents composants pour utiliser Bootstrap
+
 ### Déploiement
+
+<!-- ToDo -->
 
 ## Preview
 
-![preview](./doc/preview.png)
+![preview](../doc/preview_v3.png)

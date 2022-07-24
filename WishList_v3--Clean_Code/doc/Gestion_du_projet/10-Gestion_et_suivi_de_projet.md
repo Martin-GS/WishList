@@ -1,1 +1,0 @@
-[WishList-Client - Github Project Kanban](https://github.com/Martin-GS/WishList-Client/projects/1)
