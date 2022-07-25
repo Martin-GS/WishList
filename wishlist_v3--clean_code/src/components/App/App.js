@@ -2,16 +2,21 @@
 import React from 'react';
 
 // Import components
+import Header from '../Header/Header';
+import Main from '../Main/Main';
+import Footer from '../Footer/Footer';
 
 // Miscellaneous
-import './App.css';
-import logo from '../../assets/images/logo.png';
+import './app.css';
+// import logo from '../../assets/images/logo.png';
 
 // Component
 function App() {
   return (
-    <div className="App">
-      <img src={logo} className="App-logo" alt="logo WishList" />
+    <div className="app">
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
