@@ -45,4 +45,4 @@
 
 ## Preview
 
-![preview](../doc/preview_v2.png)
+![preview](../doc/images/preview_v2.png)

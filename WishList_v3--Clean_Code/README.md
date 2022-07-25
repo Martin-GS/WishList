@@ -15,6 +15,7 @@
 - [React Scripts](https://www.npmjs.com/package/react-scripts) (inclut dans Create React App)
 - [React](https://reactjs.org/)
 - [ReactDOM](https://fr.reactjs.org/docs/react-dom.html)
+- [React-Bootstrap](https://react-bootstrap.github.io) (framework Front-End)
 
 ### Scripts Yarn & NPM
 
@@ -22,3 +23,15 @@
 - `"build"` : lance la construction de la version de production (version prête pour hébergement dans un dossier `dist/`).
 - `"test"` : lance les tests.
 - `"eject"` : affiche les dossiers de configuration ; néanmoins cela implique que le développeur doit s'occuper de la configuration et de la mise à jour des composants et des dépendances. _Éjecter_ le projet est irréversible.
+
+### Ajouter Bootstrap au projet
+
+- Lien : [ajouter Bootstrap au projet](https://create-react-app.dev/docs/adding-bootstrap)
+
+### Ajouter Sass au projet
+
+- Lien : [ajouter Sass au projet](https://create-react-app.dev/docs/adding-bootstrap/)
+
+## Preview
+
+![preview](../doc/images/preview_v3.png)

@@ -1,5 +1,15 @@
 # ToDo
 
+---
+
+- Outils
+  - [prop-types](https://github.com/facebook/prop-types) (validation de props au sein du JSX)
+  - [React-Router](https://reactrouter.com/) (bibliothèque de routage (routing) standard)
+  - [React Feather Icons](https://feathericons.com/) (icônes)
+  - [Share This](https://github.com/sharethis-github/sharethis-reactjs) (boutons de partage)
+
+---
+
 - [ ] __Interface__ :
   - [ ] personnaliser et créer messages pour l'utilisateur : gestions des réponses "error" de l'API à prendre en compte pour afficher "le bon message" à l'utilisateur
   - [ ] Messages d'erreur en "modale/pop-up"
@@ -26,5 +36,5 @@
 
 - [ ] __Responsivité et media query__ : Le client ayant été développé avec React + Bootstrap (v1), les __media querys__ utilisés pour la version 1 pour rendre l'application responsive ne sont plus nécessaires. Néanmoins, pour pouvoir montrer/expliquer au jury qu'on sait s'en servir (les coder "a la mano"), on a gardé une copie du fichier list.scss de la v1 (que vous trouverez dans ce dossier sous le nom list-v1.scss)
 - [ ] __Formulaire de contact__ : formulaire mis en place mais non fonctionnel
-- [ ] __Profile__ : page crée, mais recupération des données imposible (réponse serveur : error 500). Et cncernant la __modification du profil utilisateur__ : structure de base créée mais composant non fonctionnel (reponse serveur : error 500)
-- [ ] __CRUD__ : création et suppression de listes et d'items OK (refresh des pages apres création/supression ENFIN ok !), modification pas encore fonctionnelle
+- [ ] __Profile__ : page crée, mais récupération des données impossible (réponse serveur : error 500). Et concernant la __modification du profil utilisateur__ : structure de base créée mais composant non fonctionnel (réponse serveur : error 500)
+- [ ] __CRUD__ : création et suppression de listes et d'items OK (refresh des pages après création/suppression ENFIN ok !), modification pas encore fonctionnelle

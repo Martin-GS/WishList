@@ -42,12 +42,12 @@ Les différentes versions de l'application ont été publiées pour montrer l'av
 
 ### WishList v1 : Apothéose
 
-![Preview WishList v1](./doc/preview_v1.png)
+![Preview WishList v1](./doc/images/preview_v1.png)
 
 ### WishList v2 : Titre Pro
 
-![Preview WishList v1](./doc/preview_v2.png)
+![Preview WishList v1](./doc/images/preview_v2.png)
 
 ### WishList v3 : Clean code
 
-![Preview WishList v3](./doc/preview_v3.png)
+![Preview WishList v3](./doc/images/preview_v3.png)
