@@ -1,8 +1,0 @@
-@use 'reset';
-@use './vars';
-
-h2 { font-weight: vars.$h2-weight };
-h3 { font-weight: vars.$h3-weight };
-h4 { font-weight: vars.$h4-weight };
-h5 { font-weight: vars.$h5-weight };
-h6 { font-weight: vars.$h6-weight };
