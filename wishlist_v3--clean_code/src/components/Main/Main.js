@@ -5,12 +5,15 @@ import React from 'react';
 
 // Miscellaneous
 import './main.css';
+import Button from 'react-bootstrap/Button';
 
 // Component
 function Main() {
   return (
     <div className="main">
-      <p>Main</p>
+      <p>WishList</p>
+      <Button>Se connecter</Button>
+      <Button>S'enregistrer</Button>
     </div>
   );
 }

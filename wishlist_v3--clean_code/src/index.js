@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import App from './components/App/App';
 
 // Miscellaneous
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 // root API

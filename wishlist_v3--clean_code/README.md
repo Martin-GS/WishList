@@ -71,7 +71,10 @@ Se référer à l'article [GitHub : "Ignoring files"](https://help.github.com/ar
 
 ### Ajouter Bootstrap au projet
 
-- Lien : [ajouter Bootstrap au projet](https://create-react-app.dev/docs/adding-bootstrap)
+1. Exécuter `npm install react-bootstrap bootstrap`
+2. Dans src/index.js  ajouter `import 'bootstrap/dist/css/bootstrap.min.css';`
+
+- Pour plus d'information de référer à l'article [ajouter React-Bootstrap et Bootstrap au projet](https://react-bootstrap.github.io/getting-started/introduction)
 
 ### Ajouter Sass au projet
 
