@@ -4,7 +4,7 @@ import React from 'react';
 // Import components
 
 // Miscellaneous
-import './footer.css';
+import './footer.scss';
 
 // Component
 function Footer() {

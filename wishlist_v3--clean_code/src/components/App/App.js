@@ -7,7 +7,7 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 
 // Miscellaneous
-import './app.css';
+import './app.scss';
 
 // Component
 function App() {

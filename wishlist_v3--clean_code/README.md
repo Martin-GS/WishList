@@ -72,13 +72,18 @@ Se référer à l'article [GitHub : "Ignoring files"](https://help.github.com/ar
 ### Ajouter Bootstrap au projet
 
 1. Exécuter `npm install react-bootstrap bootstrap`
-2. Dans src/index.js  ajouter `import 'bootstrap/dist/css/bootstrap.min.css';`
+2. Dans _src/index.js_ ajouter `import 'bootstrap/dist/css/bootstrap.min.css';`
+3. Dans _public/index.html_ ajouter `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />`
 
-- Pour plus d'information de référer à l'article [ajouter React-Bootstrap et Bootstrap au projet](https://react-bootstrap.github.io/getting-started/introduction)
+- Pour plus d'information de référer à l'article [React-Bootstrap : Getting started](https://react-bootstrap.github.io/getting-started/introduction)
 
 ### Ajouter Sass au projet
 
-- Lien : [ajouter Sass au projet](https://create-react-app.dev/docs/adding-bootstrap/)
+1. Exécuter `npm install sass`
+2. Dans *src/styles/_vars.scss* ajouter `@import "~bootstrap/scss/bootstrap";`
+3. Dans *src/index.js ajouter* `import './App.scss';`
+
+- Pour plus d'information de référer à l'article [React-Bootstrap : Getting started](https://react-bootstrap.github.io/getting-started/introduction)
 
 ## Preview
 

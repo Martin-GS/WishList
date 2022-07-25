@@ -1,6 +1,7 @@
+@use '../../styles/vars';
+
 .app {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: yellow;
 }

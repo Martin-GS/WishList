@@ -1,0 +1,9 @@
+@use 'reset';
+@use './vars';
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000000;
+}

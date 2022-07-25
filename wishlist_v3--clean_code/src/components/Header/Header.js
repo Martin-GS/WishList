@@ -4,7 +4,7 @@ import React from 'react';
 // Import components
 
 // Miscellaneous
-import './header.css';
+import './header.scss';
 // import logo from '../../assets/images/logo.png';
 
 // Component

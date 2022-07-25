@@ -1,3 +1,5 @@
+// My Custom CSS Reset (Martin GS)
+
 *,
 *::before,
 *::after {
@@ -11,13 +13,6 @@
 html,
 body {
   height: 100%;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, Montserrat, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.5;
 }
 
 img,

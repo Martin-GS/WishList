@@ -4,7 +4,7 @@ import React from 'react';
 // Import components
 
 // Miscellaneous
-import './main.css';
+import './main.scss';
 import Button from 'react-bootstrap/Button';
 
 // Component
