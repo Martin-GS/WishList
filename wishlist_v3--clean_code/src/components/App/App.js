@@ -8,7 +8,6 @@ import Footer from '../Footer/Footer';
 
 // Miscellaneous
 import './app.css';
-// import logo from '../../assets/images/logo.png';
 
 // Component
 function App() {

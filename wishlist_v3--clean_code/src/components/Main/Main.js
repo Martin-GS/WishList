@@ -5,7 +5,6 @@ import React from 'react';
 
 // Miscellaneous
 import './main.css';
-// import logo from '../../assets/images/logo.png';
 
 // Component
 function Main() {
