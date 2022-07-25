@@ -59,6 +59,16 @@
 > 
 > You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+### manifest.json
+
+[manifest.json](./wishlist_v3/../public/manifest.json) fournit les metadata qui sont utilisées lorsque l'application est installée sur un mobile ou un ordinateur.
+
+Plus d'informations [ici](https://developer.mozilla.org/en-US/docs/Web/Manifest) et [là](https://developers.google.com/web/fundamentals/web-app-manifest/)
+
+### .gitignore
+
+Se référer à l'article [GitHub : "Ignoring files"](https://help.github.com/articles/ignoring-files/) pour plus d'information.
+
 ### Ajouter Bootstrap au projet
 
 - Lien : [ajouter Bootstrap au projet](https://create-react-app.dev/docs/adding-bootstrap)
