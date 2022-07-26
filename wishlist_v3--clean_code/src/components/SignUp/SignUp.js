@@ -4,16 +4,17 @@ import React from 'react';
 // Import components
 
 // Miscellaneous
-import './footer.scss';
+import './signup.scss';
 
 // Component
-function Footer() {
+function SignUp() {
   return (
-    <div className="footer">
-      Footer
+
+    <div className="signup">
+      SignUp
     </div>
   );
 }
 
 // Export
-export default Footer;
+export default SignUp;

@@ -11,7 +11,7 @@ import './header.scss';
 function Header() {
   return (
     <div className="header">
-      <p>Header</p>
+      Header
     </div>
   );
 }

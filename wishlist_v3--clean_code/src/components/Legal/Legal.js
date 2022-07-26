@@ -4,16 +4,16 @@ import React from 'react';
 // Import components
 
 // Miscellaneous
-import './footer.scss';
+import './legal.scss';
 
 // Component
-function Footer() {
+function Legal() {
   return (
-    <div className="footer">
-      Footer
+    <div className="legal">
+      Legal
     </div>
   );
 }
 
 // Export
-export default Footer;
+export default Legal;

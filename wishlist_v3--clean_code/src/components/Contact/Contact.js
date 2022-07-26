@@ -4,16 +4,16 @@ import React from 'react';
 // Import components
 
 // Miscellaneous
-import './footer.scss';
+import './contact.scss';
 
 // Component
-function Footer() {
+function Contact() {
   return (
-    <div className="footer">
-      Footer
+    <div className="contact">
+      Contact
     </div>
   );
 }
 
 // Export
-export default Footer;
+export default Contact;

@@ -4,16 +4,17 @@ import React from 'react';
 // Import components
 
 // Miscellaneous
-import './footer.scss';
+import './notfound.scss';
 
 // Component
-function Footer() {
+function NotFound() {
   return (
-    <div className="footer">
-      Footer
+
+    <div className="notfound">
+      NotFound
     </div>
   );
 }
 
 // Export
-export default Footer;
+export default NotFound;
