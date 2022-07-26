@@ -85,6 +85,12 @@ Se référer à l'article [GitHub : "Ignoring files"](https://help.github.com/ar
 
 - Pour plus d'information de référer à l'article [React-Bootstrap : Getting started](https://react-bootstrap.github.io/getting-started/introduction)
 
+### Ajouter React-Feather (icons) au projet
+
+1. Exécuter `npm i react-feather`
+2. L'importer dans le fichier : `import * as Icon from 'react-feather';`
+3. Ajouter la balise souhaitée pour afficher l'icône dans le composant : `<Icon.User size="1.5rem" />`
+
 ## Preview
 
 ![preview](../doc/images/preview_v3.png)

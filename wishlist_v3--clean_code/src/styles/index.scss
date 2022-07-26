@@ -5,5 +5,5 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #000000;
+  color: vars.$global-color-dark;
 }

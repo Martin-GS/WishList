@@ -10,8 +10,10 @@ import App from './components/App/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.scss';
 
-// root API
+// Root API
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Render
 root.render(
   <React.StrictMode>
     <App />
