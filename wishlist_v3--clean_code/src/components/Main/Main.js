@@ -9,10 +9,10 @@ import React from 'react';
 // import CreateList from '../CreateList/CreateList';
 // import List from '../List/List';
 // import CreateItem from '../CreateItem/CreateItem';
-import Contact from '../Contact/Contact';
+// import Contact from '../Contact/Contact';
 // import About from '../About/About';
 // import Legal from '../Legal/Legal';
-// import NotFound from '../NotFound/NotFound';
+import NotFound from '../NotFound/NotFound';
 
 // Miscellaneous
 import './main.scss';
@@ -29,10 +29,10 @@ function Main() {
       {/* <CreateList /> */}
       {/* <List /> */}
       {/* <CreateItem /> */}
-      <Contact />
+      {/* <Contact /> */}
       {/* <About /> */}
       {/* <Legal /> */}
-      {/* <NotFound /> */}
+      <NotFound />
     </div>
   );
 }
