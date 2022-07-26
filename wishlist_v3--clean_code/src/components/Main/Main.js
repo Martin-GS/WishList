@@ -2,14 +2,14 @@
 import React from 'react';
 
 // Import components
-import Home from '../Home/Home';
+// import Home from '../Home/Home';
 // import SignIn from '../SignIn/SignIn';
 // import SignUp from '../SignUp/SignUp';
 // import Lists from '../Lists/Lists';
 // import CreateList from '../CreateList/CreateList';
 // import List from '../List/List';
 // import CreateItem from '../CreateItem/CreateItem';
-// import Contact from '../Contact/Contact';
+import Contact from '../Contact/Contact';
 // import About from '../About/About';
 // import Legal from '../Legal/Legal';
 // import NotFound from '../NotFound/NotFound';
@@ -22,14 +22,14 @@ function Main() {
   return (
 
     <div className="main">
-      <Home />
+      {/* <Home /> */}
       {/* <SignIn /> */}
       {/* <SignUp /> */}
       {/* <Lists /> */}
       {/* <CreateList /> */}
       {/* <List /> */}
       {/* <CreateItem /> */}
-      {/* <Contact /> */}
+      <Contact />
       {/* <About /> */}
       {/* <Legal /> */}
       {/* <NotFound /> */}
