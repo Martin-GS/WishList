@@ -1,5 +1,6 @@
 // Import packages/modules
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import { Form, Button } from 'react-bootstrap';
 
 // Import stylesheet
@@ -7,6 +8,8 @@ import './signin.scss';
 
 // Component
 const SignInForm = () => {
+
+  const goback = useNavigate();
 
   return (
 
@@ -56,7 +59,7 @@ const SignInForm = () => {
 
             <div className="row">
               <div className="col text-center">
-                <Button className="btn btn-primarys text-white shadow my-4" variant="primary" type="button">
+                <Button className="btn btn-primary text-white shadow-sm my-4" type="button" onClick={() => goback(-1)}>
                   Annuler
                 </Button>
               </div>

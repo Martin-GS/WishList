@@ -1,6 +1,7 @@
 // Import modules
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
+import { Card, Button } from 'react-bootstrap';
 
 // Import components
 
@@ -13,6 +14,8 @@ import tommy from '../../assets/images/about-tommy.png';
 
 // Component
 function About() {
+
+  const goback = useNavigate();
 
   return (
 
@@ -128,6 +131,14 @@ function About() {
 
         </div>
 
+      </div>
+
+      <div className="row">
+        <div className="col text-center">
+          <Button className="btn btn-primary text-white shadow-sm my-4" type="button" onClick={() => goback(-1)}>
+            Retour en arrière
+          </Button>
+        </div>
       </div>
 
     </div>

@@ -1,5 +1,6 @@
 // Import modules
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 // Import components
 
@@ -10,6 +11,9 @@ import notfound from '../../assets/images/notfound.jpg';
 
 // Component
 function NotFound() {
+
+  const goback = useNavigate();
+
   return (
 
     <div className="notfound">
@@ -29,8 +33,8 @@ function NotFound() {
               La page que vous recherchez n'existe pas,<br />
               ou l'article n'est plus disponible.
             </p>
-            <Button className="btn btn-primary text-white shadow my-4" variant="primary" type="button">
-              Revenir en arrière
+            <Button className="btn btn-primary text-white shadow-sm my-4" type="button" onClick={() => goback(-1)}>
+              Retour en arrière
             </Button>
           </div>
         </div>
@@ -43,7 +47,9 @@ function NotFound() {
       </div>
 
     </div>
+
   );
+
 }
 
 // Export

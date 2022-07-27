@@ -1,5 +1,7 @@
 // Import modules
 import React from 'react';
+import { useNavigate } from "react-router-dom";
+import { Button } from 'react-bootstrap';
 
 // Import components
 
@@ -8,6 +10,8 @@ import './legal.scss';
 
 // Component
 function Legal() {
+
+  const goback = useNavigate();
 
   return (
 
@@ -66,6 +70,14 @@ function Legal() {
 
         </div>
 
+      </div>
+
+      <div className="row">
+        <div className="col text-center">
+          <Button className="btn btn-primary text-white shadow-sm my-4" type="button" onClick={() => goback(-1)}>
+            Retour en arrière
+          </Button>
+        </div>
       </div>
 
     </div>
