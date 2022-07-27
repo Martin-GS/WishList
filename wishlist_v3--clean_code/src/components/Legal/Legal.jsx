@@ -26,7 +26,7 @@ function Legal() {
 
             <div className='infos'>
 
-              <h5>Ce site est édité par</h5>
+              <h5>Ce site est développé par :</h5>
 
               <ul>
                 <li>
@@ -43,7 +43,7 @@ function Legal() {
                 </li>
               </ul>
 
-              <h5>Ce site est hébergé par</h5>
+              <h5>Ce site est hébergé par :</h5>
 
               <ul>
                 <li>

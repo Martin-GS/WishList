@@ -11,13 +11,17 @@ import './app.scss';
 
 // Component
 function App() {
+
   return (
+
     <div className="app">
       <Header />
       <Main />
       <Footer />
     </div>
+    
   );
+
 }
 
 // Export
