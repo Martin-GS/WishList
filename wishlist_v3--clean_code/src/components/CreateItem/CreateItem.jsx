@@ -1,32 +1,34 @@
-// Import modules
+// Import packages/modules
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 
 // Import components
 
 // Miscellaneous
-import './createlist.scss';
+import './createitem.scss';
 
 // Component
-function CreateList() {
+const CreateItem = () => {
 
   return (
 
-    <div className="createlist">
+    <div className="createitem">
 
       {/* Page title */}
 
       <div className="row">
         <div className="col text-center">
-          <h2>Nouvelle liste</h2>
+          <h2>Nouvel article</h2>
         </div>
       </div>
 
-      {/* New list form */}
+      {/* New item form */}
 
       <div className="row mx-auto">
 
-        <div className="col d-none d-lg-block">&nbsp;</div>
+        <div className="col d-none d-lg-block">
+          &nbsp;
+        </div>
 
         <div className="col col-lg-6">
 
@@ -42,6 +44,19 @@ function CreateList() {
               />
               <Form.Text className="text-muted">
                 45 caractères maximum
+              </Form.Text>
+            </Form.Group>
+
+            <Form.Group className="my-4">
+              <Form.Label>Lien de l'article</Form.Label>
+              <Form.Control
+                type="text"
+                className="input"
+                id="url"
+                placeholder="Lien (URL)"
+              />
+              <Form.Text className="text-muted">
+                255 caractères maximum
               </Form.Text>
             </Form.Group>
 
@@ -65,7 +80,7 @@ function CreateList() {
                 </Button>
               </div>
               <div className="col text-center">
-                <Button className="btn btn-primary text-white shadow my-4">
+                <Button className="btn btn-primary text-white shadow my-4" variant="primary" type="button">
                   Valider
                 </Button>
               </div>
@@ -82,8 +97,7 @@ function CreateList() {
     </div>
 
   );
+};
 
-}
-
-// Export
-export default CreateList;
+// Export component
+export default CreateItem;
