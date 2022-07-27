@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Import components
-// import Home from '../Home/Home';
+import Home from '../Home/Home';
 // import Contact from '../Contact/Contact';
 // import About from '../About/About';
 // import Legal from '../Legal/Legal';
@@ -10,7 +10,7 @@ import React from 'react';
 // import SignIn from '../SignIn/SignIn';
 // import SignUp from '../SignUp/SignUp';
 // import Lists from '../Lists/Lists';
-import CreateList from '../CreateList/CreateList';
+// import CreateList from '../CreateList/CreateList';
 // import List from '../List/List';
 // import CreateItem from '../CreateItem/CreateItem';
 
@@ -22,11 +22,11 @@ function Main() {
   return (
 
     <div className="main">
-      {/* <Home /> */}
+      <Home />
       {/* <SignIn /> */}
       {/* <SignUp /> */}
       {/* <Lists /> */}
-      <CreateList />
+      {/* <CreateList /> */}
       {/* <List /> */}
       {/* <CreateItem /> */}
       {/* <Contact /> */}
