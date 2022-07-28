@@ -10,7 +10,7 @@
 v3 : en cours : à faire :
 
 - [] Header : j'ai utilisé des Nav.Link (de Bootstrap)... mais cela recharge toute la page. En sachant que Link (de react-router) evite le rechargement.... essayer d'en faire qqch. Attention : il faut creer une regle CSS a { color: vars.$global-color-dark; text-decoration: none; } et faire qqch pour que le menu se ferme, car cela n'est pas automatique (par exemple en creant dans n onClick sur les lien un changement de state d'un état appelé showMenu avec une valeur par défaut en false)
-- [] Footer : j'ai utilisé des Nav.Link (de Bootstrap)... mais cela recharge toute la page. En sachant que Link (de react-router) evite le rechargement.... essayer d'en faire qqch. Attention : il faut creer une regle CSS a { color: vars.$global-color-dark; text-decoration: none; }
+- vérifier dans CreateItem le retour en arrière car :id ne fonctione pas en ce moment (pas encore incorporé le sprops)
 
 ---
 

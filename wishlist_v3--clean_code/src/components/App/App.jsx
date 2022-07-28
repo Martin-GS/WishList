@@ -10,13 +10,13 @@ import Home from '../Home/Home';
 import Contact from '../Contact/Contact';
 import About from '../About/About';
 import Legal from '../Legal/Legal';
-import NotFound from '../NotFound/NotFound';
 import SignIn from '../SignIn/SignIn';
 import SignUp from '../SignUp/SignUp';
 import Lists from '../Lists/Lists';
 import CreateList from '../CreateList/CreateList';
 import List from '../List/List';
 import CreateItem from '../CreateItem/CreateItem';
+import NotFound from '../NotFound/NotFound';
 
 // Import style
 import './app.scss';
@@ -33,17 +33,17 @@ function App() {
       <Container fluid>
 
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path='/contact' exact element={<Contact />} />
-          <Route path='/about' exact element={<About />} />
-          <Route path='/legal' exact element={<Legal />} />
-          <Route path='/notfound' exact element={<NotFound />} />
-          <Route path='/signin' exact element={<SignIn />} />
-          <Route path='/signup' exact element={<SignUp />} />
-          <Route path='/lists' exact element={<Lists />} />
-          <Route path='/lists/createlist' exact element={<CreateList />} />
-          <Route path='/list/:id' exact element={<List />} />
-          <Route path='/list/:id/createitem' exact element={<CreateItem />} />
+          <Route path="/" element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/legal' element={<Legal />} />
+          <Route path='/signin' element={<SignIn />} />
+          <Route path='/signup' element={<SignUp />} />
+          <Route path='/lists' element={<Lists />} />
+          <Route path='/lists/createlist' element={<CreateList />} />
+          <Route path='/list/:id' element={<List />} />
+          <Route path='/list/:id/createitem' element={<CreateItem />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
       </Container>
