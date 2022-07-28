@@ -1,20 +1,29 @@
 @use '../../styles/vars';
 
-.navitem {
-  height: 40px;
-  display: flex;
-  flex-wrap: wrap;
-}
+.header {
 
-#navitem-img {
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 20px;
-}
+  img {
+    width: 40px;
+    height: auto;
+  }
 
-#navitem-txt {
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
+  .navitem {
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .navitem-img {
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .navitem-txt {
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
 }

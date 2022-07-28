@@ -1,18 +1,14 @@
 // Import modules
 import React from 'react';
-import { useNavigate } from "react-router-dom";
-
-// Import components
-
-// Miscellaneous
-import './contact.scss';
+import { Link } from "react-router-dom";
 import { Form, Button, Alert } from 'react-bootstrap';
 import * as Icon from 'react-feather';
 
+// Import style
+import './contact.scss';
+
 // Component
 function Contact() {
-
-  const goback = useNavigate();
 
   return (
 
@@ -73,9 +69,11 @@ function Contact() {
             <div className="row">
 
               <div className="col text-center">
-                <Button className="btn btn-primary text-white shadow my-4" type="button" onClick={() => goback(-1)}>
-                  Annuler
-                </Button>
+                <Link to="/">
+                  <Button className="btn btn-secondary text-white shadow-sm my-4" type="button">
+                    Annuler
+                  </Button>
+                </Link>
               </div>
 
               <div className="col text-center">

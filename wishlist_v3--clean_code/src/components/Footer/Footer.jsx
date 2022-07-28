@@ -1,82 +1,67 @@
-// Import modules
+// Imports modules
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Container, Navbar } from 'react-bootstrap';
 
-// Import components
-
-// Miscellaneous
+// Import style
 import './footer.scss';
-import { Navbar, Nav } from 'react-bootstrap';
 
 // Component
 function Footer() {
 
   return (
+
     <div className="footer">
 
-      {/* Footer : displayed in desktop version / hidden in mobile version */}
-      <div className="footer container-fluid d-none d-md-block">
+      <Container fluid>
 
-        {/* phantom footer */}
-        <div className="row py-3">
-          <div className="col">
-            &nbsp;
+        {/* Footer : displayed in desktop version / hidden in mobile version */}
+        <div className="footer container-fluid d-none d-md-block">
+
+          {/* phantom footer */}
+          <div className="row py-3">
+              &nbsp;
           </div>
-        </div>
 
-        {/* real footer */}
-        <div className="fixed-bottom">
+          {/* real footer */}
+          <div className="fixed-bottom">
 
-          <Navbar className="justify-content-center text-secondary" bg="light" variant="light">
+            <Navbar className="justify-content-center text-secondary" bg="light" variant="light">
 
-            <Nav>
+                <div className="px-3 py-2">
+                  &copy; {new Date().getFullYear()} WishList
+                </div>
 
-              {/* Copyright */}
-              <div>
-                <Nav.Item>
-                  <Nav.Link>
-                    &copy; {new Date().getFullYear()} WishList. Tous droits réservés
-                  </Nav.Link>
-                </Nav.Item>
-              </div>
-
-              {/* Contact link */}
-              <div>
-                <Nav.Item>
-                  <Nav.Link href="/contact">
+                <div className="px-3 py-2">
+                  <Link to="/contact" className="text-secondary text-decoration-none">
                     Contact
-                  </Nav.Link>
-                </Nav.Item>
-              </div>
+                  </Link>
+                </div>
 
-              {/* About link */}
-              <div>
-                <Nav.Item>
-                  <Nav.Link href="/about">
+                <div className="px-3 py-2">
+                  <Link to="/about" className="text-secondary text-decoration-none">
                     À propos
-                  </Nav.Link>
-                </Nav.Item>
-              </div>
-              
-              {/* Legal link */}
-              <div>
-                <Nav.Item>
-                  <Nav.Link href="/legal">
+                  </Link>
+                </div>
+
+                <div className="px-3 py-2">
+                  <Link to="/legal" className="text-secondary text-decoration-none">
                     Mentions légales
-                  </Nav.Link>
-                </Nav.Item>
-              </div>
+                  </Link>
+                </div>
 
-            </Nav>
+            </Navbar>
 
-          </Navbar>
+          </div>
 
         </div>
 
-      </div>
+      </Container>
 
     </div>
 
   );
+
 }
 
 // Export

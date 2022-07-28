@@ -1,17 +1,13 @@
-// Import packages/modules
+// Import modules
 import React from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 
-// Import components
-
-// Miscellaneous
+// Import style
 import './createitem.scss';
 
 // Component
-const CreateItem = () => {
-
-  const goback = useNavigate();
+const CreateItem = ({dataId}) => {
 
   return (
 
@@ -77,16 +73,24 @@ const CreateItem = () => {
             </Form.Group>
 
             <div className="row">
+
               <div className="col text-center">
-                <Button className="btn btn-primary text-white shadow my-4" variant="primary" type="button">
-                  Annuler
-                </Button>
+                {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
+                {/* !!! dataId non défini, à coriger lors de la mise en place des props */}
+                {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
+                <Link to={`/list/${dataId}`}>
+                  <Button className="btn btn-secondary text-white shadow my-4" variant="primary" type="button">
+                    Annuler
+                  </Button>
+                </Link>
               </div>
+
               <div className="col text-center">
-                <Button className="btn btn-primary text-white shadow-sm my-4" type="button" onClick={() => goback(-1)}>
-                  Annuler
-                </Button>
+                  <Button className="btn btn-primary text-white shadow-sm my-4" type="button">
+                    Valider
+                  </Button>
               </div>
+
             </div>
 
           </Form>

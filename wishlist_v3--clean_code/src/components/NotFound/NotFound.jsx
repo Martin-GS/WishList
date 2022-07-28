@@ -1,18 +1,16 @@
 // Import modules
 import React from 'react';
-import { useNavigate } from "react-router-dom";
-
-// Import components
-
-// Miscellaneous
-import './notfound.scss';
+import { Link } from "react-router-dom";
 import { Button } from 'react-bootstrap';
+
+// Import style
+import './notfound.scss';
+
+// Import images
 import notfound from '../../assets/images/notfound.jpg';
 
 // Component
 function NotFound() {
-
-  const goback = useNavigate();
 
   return (
 
@@ -33,15 +31,12 @@ function NotFound() {
               La page que vous recherchez n'existe pas,<br />
               ou l'article n'est plus disponible.
             </p>
-            <Button className="btn btn-primary text-white shadow-sm my-4" type="button" onClick={() => goback(-1)}>
-              Retour en arrière
-            </Button>
+            <Link to="/">
+              <Button className="btn btn-primary text-white shadow-sm my-4" type="button">
+                Retour à l'accueil
+              </Button>
+            </Link>
           </div>
-        </div>
-
-        <div className="row">
-          {/* <div className="col text-center"> */}
-          {/* </div> */}
         </div>
 
       </div>

@@ -1,10 +1,12 @@
 // Import modules
 import React from 'react';
+import { Link } from "react-router-dom";
+import { Button } from 'react-bootstrap';
 
-// Import components
-
-// Miscellaneous
+// Import style
 import './home.scss';
+
+// Import images
 import insigne from '../../assets/images/insigne.png';
 import card1 from '../../assets/images/home-1.jpg';
 import card2 from '../../assets/images/home-2.jpg';
@@ -34,15 +36,19 @@ function Home() {
           </div>
 
           <div className="col text-center mt-4">
-            <a type="button" className="btn btn-primary text-white shadow" href="/signin" role="button">
-              Se connecter
-            </a>
+            <Link to="/signup">
+              <Button className="btn btn-primary text-white shadow" type="button">
+                S'enregistrer
+              </Button>
+            </Link>
           </div>
 
           <div className="col text-center mt-4">
-            <a type="button" className="btn btn-primary text-white shadow" href="/signup" role="button">
-              S'enregistrer
-            </a>
+            <Link to="/signin">
+              <Button className="btn btn-primary text-white shadow" type="button">
+                Se connecter
+              </Button>
+            </Link>
           </div>
 
           <div className="col d-none d-lg-block">

@@ -1,17 +1,13 @@
 // Import modules
 import React from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Form, Button } from 'react-bootstrap';
 
-// Import components
-
-// Miscellaneous
+// Import style
 import './createlist.scss';
 
 // Component
 function CreateList() {
-
-  const goback = useNavigate();
 
   return (
 
@@ -19,17 +15,18 @@ function CreateList() {
 
       {/* Page title */}
 
-      <div className="row">
-        <div className="col text-center">
-          <h2>Nouvelle liste</h2>
-        </div>
+      <div className="row text-center">
+        <h2>Nouvelle liste</h2>
       </div>
 
       {/* New list form */}
 
       <div className="row mx-auto">
 
-        <div className="col d-none d-lg-block">&nbsp;</div>
+        {/* Phantom left div : center form in large screen */}
+        <div className="col d-none d-lg-block">
+          &nbsp;
+        </div>
 
         <div className="col col-lg-6">
 
@@ -62,11 +59,15 @@ function CreateList() {
             </Form.Group>
 
             <div className="row">
+
               <div className="col text-center">
-                <Button className="btn btn-primary text-white shadow-sm my-4" type="button" onClick={() => goback(-1)}>
-                  Annuler
-                </Button>
+                <Link to="/lists">
+                  <Button className="btn btn-secondary text-white shadow-sm my-4" type="button">
+                    Annuler
+                  </Button>
+                </Link>
               </div>
+
               <div className="col text-center">
                 <Button className="btn btn-primary text-white shadow my-4">
                   Valider
@@ -78,7 +79,10 @@ function CreateList() {
 
         </div>
 
-        <div className="col d-none d-lg-block">&nbsp;</div>
+        {/* Phantom right div : center form in large screen */}
+        <div className="col d-none d-lg-block">
+          &nbsp;
+        </div>
 
       </div>
 

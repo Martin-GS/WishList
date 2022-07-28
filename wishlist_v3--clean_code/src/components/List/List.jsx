@@ -1,12 +1,14 @@
 // Import modules
 import React from 'react';
+import { Link } from "react-router-dom";
+import { Button } from 'react-bootstrap';
 import * as Icon from 'react-feather';
 import { InlineShareButtons } from 'sharethis-reactjs';
 
 // Import components
 import DeleteItem from './DeleteItem';
 
-// Miscellaneous
+// Import style
 import './list.scss';
 
 // Component
@@ -19,14 +21,35 @@ function List() {
     {
       id: 1,
       image_url: 'https://user-images.githubusercontent.com/3369400/133268513-5bfe2f93-4402-42c9-a403-81c9e86934b6.jpeg',
-      url: '/',
+      url: 'https://martin.gs',
       title: 'Titre un',
       coment: 'Commentaire du premier item'
     },
     {
       id: 2,
       image_url: 'https://user-images.githubusercontent.com/3369400/133268513-5bfe2f93-4402-42c9-a403-81c9e86934b6.jpeg',
-      url: '/',
+      url: 'https://martin.gs',
+      title: 'Titre deux',
+      coment: 'Commentaire du deuxième item'
+    },
+    {
+      id: 3,
+      image_url: 'https://user-images.githubusercontent.com/3369400/133268513-5bfe2f93-4402-42c9-a403-81c9e86934b6.jpeg',
+      url: 'https://martin.gs',
+      title: 'Titre deux',
+      coment: 'Commentaire du deuxième item'
+    },
+    {
+      id: 4,
+      image_url: 'https://user-images.githubusercontent.com/3369400/133268513-5bfe2f93-4402-42c9-a403-81c9e86934b6.jpeg',
+      url: 'https://martin.gs/',
+      title: 'Titre deux',
+      coment: 'Commentaire du deuxième item'
+    },
+    {
+      id: 5,
+      image_url: 'https://user-images.githubusercontent.com/3369400/133268513-5bfe2f93-4402-42c9-a403-81c9e86934b6.jpeg',
+      url: 'https://martin.gs/',
       title: 'Titre deux',
       coment: 'Commentaire du deuxième item'
     }
@@ -36,20 +59,46 @@ function List() {
 
     <div className="list">
 
-      {/* Title (and add-item button in desktop mode) */}
-      <div className="row mb-3">
-        <div className="d-flex justify-content-between">
-          <div className="list-title">
-            <h2>{dataTitle}</h2>
-            <p className="text-secondary">{dataComent}</p>
-          </div>
-          <div className="lists-addlist align-self-center d-none d-md-block">
-            <a type="button" className="btn btn-outline-dark shadow" href={`/list/${dataId}/createitem`} role="button">Nouvel article</a>
-          </div>
+      {/* Title and navigation buttons */}
+
+      <div className="d-flex justify-content-between mb-5">
+        <div>
+          {/* Small screen */}
+          <Link to="/lists" className="d-sd-block d-md-none">
+            <Button className="btn btn-primary text-white py-2 shadow-sm" type="button">
+              <Icon.ChevronLeft size="2em" />
+            </Button>
+          </Link>
+          {/* Large screen */}
+          <Link to="/lists" className="d-none d-md-block ">
+            <Button className="btn btn-primary text-white shadow-sm py-2" type="button">
+              Retour
+            </Button>
+          </Link>
+        </div>
+        {/* Large AND small screens */}
+        <div className="list-title">
+          <h2>{dataTitle}</h2>
+          <p className="text-secondary">{dataComent}</p>
+        </div>
+        <div>
+          {/* Small screen */}
+          <Link to={`/list/${dataId}/createitem`} className="d-sd-block d-md-none">
+            <Button className="btn btn-primary text-white py-2 shadow-sm" type="button">
+              <Icon.Plus size="2em" />
+            </Button>
+          </Link>
+          {/* Large screen */}
+          <Link to={`/list/${dataId}/createitem`} className="d-none d-md-block ">
+            <Button className="btn btn-primary text-white shadow-sm py-2" type="button">
+              Nouvel article
+            </Button>
+          </Link>
         </div>
       </div>
 
       {/* Display items : looping data from props (API) */}
+
       <div className="row">
 
         {
@@ -62,7 +111,7 @@ function List() {
                 <img src={item.image_url} alt={item.id} className="item-image-thumbnail" />
                 {/* </Link> */}
                 {/* <Link to={{ pathname: item.url }} target="_blank"> */}
-                <div className="list-oneitem-image-div" style={{
+                <div className="item-image-url" style={{
                   backgroundImage: `url(${item.image_url})`,
                   width: '100%',
                   backgroundRepeat: 'no-repeat',
@@ -70,7 +119,7 @@ function List() {
                   backgroundSize: 'cover',
                   backgroundPosition: 'center center',
                 }} >
-                  
+
                 </div>
                 {/* </Link> */}
                 <div className="m-2">
@@ -122,38 +171,6 @@ function List() {
         }
 
       </div>
-
-      {/* List-Footer : displayed only in List component */}
-      <div className="list-footer">
-
-        {/* phantom list-footer */}
-        <div className="row py-3">
-          <div className="col">
-            &nbsp;
-          </div>
-        </div>
-
-        {/* real list-footer */}
-        <div className="fixed-bottom container-fluid d-flex py-3 bg-light justify-content-around">
-          <div>
-            <a type="button" className="bg-light border-0 link-dark" href="/lists" role="button">
-              <Icon.ChevronLeft className="rounded border border-2 border-dark" size="1.6em" />
-            </a>
-          </div>
-          <div>
-            <a type="button" className="bg-light border-0 link-dark" href="/lists" role="button">
-              <Icon.Home size="1.6em" />
-            </a>
-          </div>
-          <div>
-            <a type="button" className="bg-light border-0 link-dark" href={`/list/${dataId}/createitem`} role="button">
-              <Icon.Plus className="rounded border border-2 border-dark" size="1.6em" />
-            </a>
-          </div>
-        </div>
-
-      </div>
-
 
     </div>
 

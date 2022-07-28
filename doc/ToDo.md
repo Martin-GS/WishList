@@ -3,10 +3,14 @@
 ---
 
 - Outils
-  - [prop-types](https://github.com/facebook/prop-types) (validation de props au sein du JSX)
-  - [React-Router](https://reactrouter.com/) (bibliothèque de routage (routing) standard)
-  - [React Feather Icons](https://feathericons.com/) (icônes)
-  - [Share This](https://github.com/sharethis-github/sharethis-reactjs) (boutons de partage)
+  - [prop-types](https://github.com/facebook/prop-types)
+
+---
+
+v3 : en cours : à faire :
+
+- [] Header : j'ai utilisé des Nav.Link (de Bootstrap)... mais cela recharge toute la page. En sachant que Link (de react-router) evite le rechargement.... essayer d'en faire qqch. Attention : il faut creer une regle CSS a { color: vars.$global-color-dark; text-decoration: none; } et faire qqch pour que le menu se ferme, car cela n'est pas automatique (par exemple en creant dans n onClick sur les lien un changement de state d'un état appelé showMenu avec une valeur par défaut en false)
+- [] Footer : j'ai utilisé des Nav.Link (de Bootstrap)... mais cela recharge toute la page. En sachant que Link (de react-router) evite le rechargement.... essayer d'en faire qqch. Attention : il faut creer une regle CSS a { color: vars.$global-color-dark; text-decoration: none; }
 
 ---
 

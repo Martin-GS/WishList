@@ -1,20 +1,17 @@
-// Import packages/modules
+// Import modules
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import * as Icon from 'react-feather';
 
-// Import stylesheet
+// Import style
 import './list.scss';
 
 // Component
-const DeleteItem = ({ itemObj, listId }) => {
-
+const DeleteItem = () => {
   return (
-
-    <Button className="bg-light border-0">
-      <Icon.Trash className="link-secondary" size="1.3em" />
+    <Button className="delete-item bg-light border-0">
+      <Icon.Trash className="link-danger" size="1.3rem" />
     </Button>
-
   );
 };
 
