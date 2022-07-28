@@ -33,13 +33,13 @@ const Header = () => {
 
           {/* Navigation */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
 
             {/* Nav menu */}
             <Nav>
 
               {/* LogOn : display if disconnected / hidden if connected */}
-              <Nav.Link href="/signup">
+              <Link to="/signup" className="text-secondary text-decoration-none py-2">
                 <span className="navitem">
                   <span className="navitem-img">
                     <Icon.UserPlus size="1.7em"/>
@@ -48,10 +48,10 @@ const Header = () => {
                     S'enregistrer
                   </span>
                 </span>
-              </Nav.Link>
+              </Link>
 
               {/* LogIn : display if disconnected / hidden if connected */}
-              <Nav.Link href="/signin">
+              <Link to="/signin" className="text-secondary text-decoration-none py-2">
                 <span className="navitem">
                   <span className="navitem-img">
                     <Icon.LogIn size="1.7em"/>
@@ -60,10 +60,10 @@ const Header = () => {
                     Se connecter
                   </span>
                 </span>
-              </Nav.Link>
+              </Link>
 
               {/* LogOut : display if connected / hidden if disconnected */}
-              <Nav.Link href="/">
+              <Link to="/" className="text-secondary text-decoration-none py-2">
                 <span className="navitem">
                   <span className="navitem-img">
                     <Icon.LogOut size="1.7em" />
@@ -72,12 +72,12 @@ const Header = () => {
                     Déconnexion
                   </span>
                 </span>
-              </Nav.Link>
+              </Link>
 
               <hr />
 
               {/* Contact link : displayed in mobile version / hidden in desktop version */}
-              <Nav.Link href="/contact" className="d-md-none">
+              <Link to="/contact" className="d-md-none text-secondary text-decoration-none py-2">
                 <span className="navitem">
                   <span className="navitem-img">
                     <Icon.Mail size="1.7em" />
@@ -86,10 +86,10 @@ const Header = () => {
                     Contact
                   </span>
                 </span>
-              </Nav.Link>
+              </Link>
 
               {/* About link : displayed in mobile version / hidden in desktop version */}
-              <Nav.Link href="/about" className="d-md-none">
+              <Link to="/about" className="d-md-none text-secondary text-decoration-none py-2">
                 <span className="navitem">
                   <span className="navitem-img">
                     <Icon.Shield size="1.7em" />
@@ -98,10 +98,10 @@ const Header = () => {
                     À propos
                   </span>
                 </span>
-              </Nav.Link>
+              </Link>
 
               {/* Legal link : displayed in mobile version / hidden in desktop version */}
-              <Nav.Link href="/legal" className="d-md-none">
+              <Link to="/legal" className="d-md-none text-secondary text-decoration-none py-2">
                 <span className="navitem">
                   <span className="navitem-img">
                     <Icon.Square size="1.7em" />
@@ -110,16 +110,14 @@ const Header = () => {
                     Mentions légales
                   </span>
                 </span>
-              </Nav.Link>
+              </Link>
 
               <hr />
 
               {/* Copyright : displayed if mobile version / hidden if desktop version */}
-              <Link to="/" className="d-md-none">
-                <div className="text-center">
-                  &copy; {new Date().getFullYear()} WishList
-                </div>
-              </Link>
+              <div className="d-md-none text-center py-2">
+                &copy; {new Date().getFullYear()} WishList
+              </div>
 
             </Nav>
 

@@ -31,7 +31,7 @@ function Contact() {
           <div className="row">
             <div className="col text-center">
               <Alert>
-                <Icon.Bell className='note--icon' color="red" size="1.3rem" /> Page en construction, formulaire non fonctionnel.
+                <Icon.Bell className='note--icon' /> Page en construction, formulaire non fonctionnel.
               </Alert>
             </div>
           </div>
