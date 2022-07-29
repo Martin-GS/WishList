@@ -1,9 +1,9 @@
 // Imports modules
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Navbar } from 'react-bootstrap';
 
 // Import style
+import { Container, Navbar } from 'react-bootstrap';
 import './footer.scss';
 
 // Component

@@ -1,12 +1,12 @@
 // Import modules
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Form, Button } from 'react-bootstrap';
 
 // Import components
 // import AlertError from './AlertError';
 
 // Import style
+import { Form, Button } from 'react-bootstrap';
 import './signup.scss';
 
 // Component
@@ -82,7 +82,7 @@ function SignUp() {
               </div>
 
               <div className="col text-center">
-                <Button className="btn btn-primary text-white shadow my-4" variant="primary" type="button">
+                <Button className="btn btn-primary text-white shadow my-4" variant="primary" type="submit">
                   Valider
                 </Button>
               </div>

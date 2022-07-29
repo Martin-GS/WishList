@@ -1,11 +1,13 @@
 // Import modules
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Form, Button, Alert } from 'react-bootstrap';
-import * as Icon from 'react-feather';
 
 // Import style
+import { Form, Button, Alert } from 'react-bootstrap';
 import './contact.scss';
+
+// Import images
+import * as Icon from 'react-feather';
 
 // Component
 function Contact() {
@@ -31,7 +33,7 @@ function Contact() {
           <div className="row">
             <div className="col text-center">
               <Alert>
-                <Icon.Bell className='note--icon' /> Page en construction, formulaire non fonctionnel.
+                <Icon.AlertTriangle className="note--icon" /> Page en construction, formulaire non fonctionnel.
               </Alert>
             </div>
           </div>

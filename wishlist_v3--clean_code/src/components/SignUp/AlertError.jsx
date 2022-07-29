@@ -1,40 +1,41 @@
-// // Import packages/modules
-// import React, { useState } from 'react';
-// import { Modal, Button } from 'react-bootstrap';
+// Import modules
+import React, { useState } from 'react';
 
-// // Import stylesheet
-// import './signup.scss';
+// Import style
+import { Modal, Button } from 'react-bootstrap';
+import './signup.scss';
 
-// // Component
-// const AlertError = () => {
-//   // State
-//   const [show, setShow] = useState(true);
+// Component
+const AlertError = () => {
 
-//   const handleClose = () => setShow(false);
+  // State
+  const [show, setShow] = useState(true);
 
-//   return (
-//     <div className="alerterror">
+  const handleClose = () => setShow(false);
 
-//       <Modal show={show} onHide={handleClose}>
-//         <Modal.Header>
-//           <Modal.Title>Une erreur s'est produite, veuillez réessayer.</Modal.Title>
-//         </Modal.Header>
-//         <Modal.Body>
-//           <p>
-//             Une erreur s'est produite, veuillez réessayer.
-//           </p>
-//         </Modal.Body>
-//         <Modal.Footer>
+  return (
+    <div className="alerterror">
 
-//           <Button variant="primary" onClick={handleClose}>
-//             Fermer
-//           </Button>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header>
+          <Modal.Title>Une erreur s'est produite, veuillez réessayer.</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            Une erreur s'est produite, veuillez réessayer.
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
 
-//         </Modal.Footer>
-//       </Modal>
-//     </div>
-//   );
-// };
+          <Button variant="primary" onClick={handleClose}>
+            Fermer
+          </Button>
 
-// // Export component
-// export default AlertError;
+        </Modal.Footer>
+      </Modal>
+    </div>
+  );
+};
+
+// Export component
+export default AlertError;

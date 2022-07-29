@@ -1,5 +1,8 @@
 @use '../../styles/vars';
 
-.note--icon {
-  display: inline-block;
+.contact {
+  .note--icon {
+    display: inline-block;
+    padding: 0 7px 4px 0;
+  }
 }

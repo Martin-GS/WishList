@@ -1,13 +1,24 @@
-// Imports
+// Import modules
 import React from 'react';
 import { Link } from "react-router-dom";
+
+// Import style
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import * as Icon from 'react-feather';
 import './header.scss';
+
+// Import images
+import * as Icon from 'react-feather';
 import logo from '../../assets/images/logo.png';
 
 // Component
 const Header = () => {
+
+  // const token = isUserAuthenticated();
+
+  // const logout = () => {
+  //   localStorage.clear();
+  //   window.location.href = '/';
+  // };
 
   return (
 
@@ -39,40 +50,58 @@ const Header = () => {
             <Nav>
 
               {/* LogOn : display if disconnected / hidden if connected */}
-              <Link to="/signup" className="text-secondary text-decoration-none py-2">
-                <span className="navitem">
-                  <span className="navitem-img">
-                    <Icon.UserPlus size="1.7em"/>
+              {/* {(token !== true) ? */}
+                <Link to="/signup" className="text-secondary text-decoration-none py-2">
+                  <span className="navitem">
+                    <span className="navitem-img">
+                      <Icon.UserPlus size="1.7em" />
+                    </span>
+                    <span className="navitem-txt d-md-none">
+                      S'enregistrer
+                    </span>
                   </span>
-                  <span className="navitem-txt d-md-none">
-                    S'enregistrer
-                  </span>
-                </span>
-              </Link>
+                </Link>
+                {/* : */}
+                {/* <div></div> */}
+              {/* } */}
 
               {/* LogIn : display if disconnected / hidden if connected */}
-              <Link to="/signin" className="text-secondary text-decoration-none py-2">
-                <span className="navitem">
-                  <span className="navitem-img">
-                    <Icon.LogIn size="1.7em"/>
+              {/* {(token !== true) ? */}
+                <Link to="/signin" className="text-secondary text-decoration-none py-2">
+                  <span className="navitem">
+                    <span className="navitem-img">
+                      <Icon.LogIn size="1.7em" />
+                    </span>
+                    <span className="navitem-txt d-md-none">
+                      Se connecter
+                    </span>
                   </span>
-                  <span className="navitem-txt d-md-none">
-                    Se connecter
-                  </span>
-                </span>
-              </Link>
+                </Link>
+                {/* : */}
+                {/* <div></div> */}
+              {/* } */}
 
               {/* LogOut : display if connected / hidden if disconnected */}
-              <Link to="/" className="text-secondary text-decoration-none py-2">
-                <span className="navitem">
-                  <span className="navitem-img">
-                    <Icon.LogOut size="1.7em" />
+              {/* {(token === true) ? */}
+                <Link to="/" className="text-secondary text-decoration-none py-2">
+                  <span className="navitem">
+                    <span className="navitem-img">
+                      <Icon.LogOut
+                        size="1.7em"
+                        // onClick={() => {
+                        //   const confirmBox = window.confirm("Voulez-vous vous déconnecter ?")
+                        //   if (confirmBox === true) { logout() }
+                        // }}
+                      />
+                    </span>
+                    <span className="navitem-txt d-md-none">
+                      Déconnexion
+                    </span>
                   </span>
-                  <span className="navitem-txt d-md-none">
-                    Déconnexion
-                  </span>
-                </span>
-              </Link>
+                </Link>
+                {/* : */}
+                {/* <div></div> */}
+              {/* } */}
 
               <hr />
 
@@ -130,6 +159,7 @@ const Header = () => {
     </div>
 
   );
+
 };
 
 // Export component

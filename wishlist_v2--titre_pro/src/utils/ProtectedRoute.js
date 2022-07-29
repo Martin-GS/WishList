@@ -1,7 +1,7 @@
-=import React from 'react';
+import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { isUserAuthenticated } from './auth';
-=
+
 const ProtectedRoute = ({ isAuth, component: Component, ...rest }) => {
   return <Route {...rest} render={(props) => {
     if (isUserAuthenticated()) {

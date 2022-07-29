@@ -1,10 +1,12 @@
 // Imports packages and hooks
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import * as Icon from 'react-feather';
 
 // Import style
+import { Button } from 'react-bootstrap';
 import './lists.scss';
+
+// Import images
+import * as Icon from 'react-feather';
 
 // Component
 const DeleteList = () => {

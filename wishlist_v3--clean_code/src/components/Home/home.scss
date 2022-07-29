@@ -2,29 +2,33 @@
 
 // ----- LOGOTYPE -----
 
-// Small media : 0px-576px
-@media only screen and (max-width: 576px) {
-  .logotype {
-    max-width: 60%;
-    height: auto;
-    margin-bottom: 0.7em;
-  }
-}
+.home {
 
-// Medium media : 577px-992px
-@media only screen and (min-width: 577px) and (max-width: 992px) {
-  .logotype {
-    max-width: 50%;
-    height: auto;
-    margin-bottom: 1em;
+  // Small media : 0px-576px
+  @media only screen and (max-width: 576px) {
+    .logotype {
+      max-width: 60%;
+      height: auto;
+      margin-bottom: 0.7em;
+    }
   }
-}
 
-// Large media : +993px
-@media only screen and (min-width: 993px) {
-  .logotype {
-    max-width: 40%;
-    height: auto;
-    margin-bottom: 1em;
+  // Medium media : 577px-992px
+  @media only screen and (min-width: 577px) and (max-width: 992px) {
+    .logotype {
+      max-width: 50%;
+      height: auto;
+      margin-bottom: 1em;
+    }
   }
+
+  // Large media : +993px
+  @media only screen and (min-width: 993px) {
+    .logotype {
+      max-width: 40%;
+      height: auto;
+      margin-bottom: 1em;
+    }
+  }
+
 }

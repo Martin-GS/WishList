@@ -1,9 +1,9 @@
 // Import modules
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Button } from 'react-bootstrap';
 
 // Import style
+import { Button } from 'react-bootstrap';
 import './notfound.scss';
 
 // Import images

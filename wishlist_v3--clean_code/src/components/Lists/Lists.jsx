@@ -1,12 +1,12 @@
 // Import modules
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Button } from 'react-bootstrap';
 
 // Import components
 import DeleteList from './DeleteList'
 
 // Import style
+import { Button } from 'react-bootstrap';
 import './lists.scss';
 
 // Component

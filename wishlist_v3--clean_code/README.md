@@ -18,6 +18,7 @@
 - [React Scripts](https://www.npmjs.com/package/react-scripts)
 - [Web Vitals](https://www.npmjs.com/package/web-vitals)
 - [React-Router](https://reactrouter.com/docs/en/v6/getting-started/installation#create-react-app)
+- [Axios](https://axios-http.com/fr/)
 - [React-Bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
 - [Sass/SCSS](https://sass-lang.com/)
 - [React-Feather-Icons](https://feathericons.com/)

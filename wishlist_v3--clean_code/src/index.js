@@ -1,9 +1,13 @@
-// Imports
+// Import modules
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from 'react-router-dom';
+
+// Import components
 import App from './components/App/App';
+
+// Import style
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.scss';
 
@@ -19,6 +23,5 @@ root.render(
   </React.StrictMode>
 );
 
-// Web vitals.
-// Learn more: https://bit.ly/CRA-vitals
+// Web vitals
 reportWebVitals();

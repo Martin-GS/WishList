@@ -1,7 +1,6 @@
 // Import modules
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import Container from 'react-bootstrap/Container';
 
 // Import components
 import Header from '../Header/Header';
@@ -19,6 +18,7 @@ import CreateItem from '../CreateItem/CreateItem';
 import NotFound from '../NotFound/NotFound';
 
 // Import style
+import Container from 'react-bootstrap/Container';
 import './app.scss';
 
 // Component

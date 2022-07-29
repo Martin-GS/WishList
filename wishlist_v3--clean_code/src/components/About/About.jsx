@@ -1,9 +1,9 @@
 // Import modules
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Card, Button } from 'react-bootstrap';
 
 // Import style
+import { Card, Button } from 'react-bootstrap';
 import './about.scss';
 
 // Import images
