@@ -15,13 +15,10 @@ function NotFound() {
   return (
 
     <div className="notfound">
-
       <div className="row my-4">
-
         <div className="col-12 col-md-6 mx-auto">
           <img src={notfound} className="img-fluid" alt="Error 404 - Page non trouvée" />
         </div>
-
         <div className="col-12 col-md-6 mx-auto">
           <div className="my-3 text-center">
             <h2>Error 404</h2>
@@ -38,9 +35,7 @@ function NotFound() {
             </Link>
           </div>
         </div>
-
       </div>
-
     </div>
 
   );

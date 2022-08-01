@@ -93,7 +93,7 @@ Se référer à l'article [GitHub : "Ignoring files"](https://help.github.com/ar
 
 ### Ajouter React-Feather (icons) au projet
 
-1. Exécuter `npm i react-feather`
+1. Exécuter `npm install react-feather`
 2. L'importer dans le fichier : `import * as Icon from 'react-feather';`
 3. Ajouter la balise souhaitée pour afficher l'icône dans le composant : `<Icon.User size="1.5rem" />`
 
