@@ -33,16 +33,12 @@ function SignIn() {
       })
       .catch((err) => {
         setError(<AlertError />);
-        console.log("Signin component : axios error :", err);
-        console.log("Signin component : axios error :", error);
       });
   };
 
   // Handle submit
   const submitHandler = event => {
     event.preventDefault();
-    console.log("event", event)
-    console.log("details", details)
     Login(details);
   };
 

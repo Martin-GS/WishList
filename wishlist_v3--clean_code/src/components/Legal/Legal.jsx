@@ -13,13 +13,11 @@ function Legal() {
 
     <div className="legal">
 
-      <div className="row">
-        <div className="col text-center">
-          <h2>Mentions légales</h2>
-        </div>
+      <div className="col text-center py-4">
+        <h2>Mentions légales</h2>
       </div>
 
-      <div className="row my-4">
+      <div className="row my-2">
         <div className="col">
 
           <div className='infos'>

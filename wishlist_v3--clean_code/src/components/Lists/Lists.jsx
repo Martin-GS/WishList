@@ -3,9 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
+// Import auth
+import { getToken } from '../../utils/auth';
+
 // Import components
 import DeleteList from './DeleteList'
-import Loader from '../Loader/loader';
+import Loader from '../Loader/Loader';
 
 // Import style
 import { Button } from 'react-bootstrap';
@@ -40,6 +43,7 @@ function Lists() {
   // "Life-cycles"
   useEffect(() => {
     fetchLists();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -22,16 +22,16 @@ function CreateList() {
 
   const token = getToken();
 
-  const handleSubmit = (evt) => {
+  const handleSubmit = (event) => {
 
-    evt.preventDefault();
+    event.preventDefault();
 
     setLoading(true);
     setIsError(false);
 
     const data = {
-      title: title,
-      coment: coment,
+      title,
+      coment
     };
 
     axios.post('https://onedream-onewish.herokuapp.com/lists', data, {
@@ -85,7 +85,7 @@ function CreateList() {
                 id="title"
                 placeholder="Titre"
                 value={title}
-                onChange={evt => setTitle(evt.target.value)}
+                onChange={event => setTitle(event.target.value)}
               />
               <Form.Text className="text-muted">
                 45 caractères maximum
@@ -100,7 +100,7 @@ function CreateList() {
                 id="coment"
                 placeholder="Commentaire"
                 value={coment}
-                onChange={(evt) => setComent(evt.target.value)}
+                onChange={(event) => setComent(event.target.value)}
               />
               <Form.Text className="text-muted">
                 255 caractères maximum

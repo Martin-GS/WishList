@@ -16,7 +16,9 @@ import * as Icon from 'react-feather';
 const DeleteList = ({ getList }) => {
 
   // States
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [isError, setIsError] = useState(false);
   const [data, setData] = useState(null);
 

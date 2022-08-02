@@ -33,7 +33,6 @@ function SignUp() {
         setIsAuth(true);
       })
       .catch((err) => {
-        console.log("error", error)
         setError(<AlertError />);
       });
   };

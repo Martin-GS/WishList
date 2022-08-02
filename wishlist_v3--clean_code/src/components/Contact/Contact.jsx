@@ -16,10 +16,8 @@ function Contact() {
 
     <div className="contact">
 
-      <div className="row">
-        <div className="col text-center">
-          <h2>Contactez nous</h2>
-        </div>
+      <div className="col text-center py-2">
+        <h2>Contactez nous</h2>
       </div>
 
       <div className="row">

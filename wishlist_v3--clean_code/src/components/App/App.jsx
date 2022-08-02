@@ -3,7 +3,7 @@ import React from 'react';
 import { Routes, Route } from "react-router-dom";
 
 // Import ProtectedRoute
-import ProtectedRoute from '../../utils/ProtectedRoute';
+// import ProtectedRoute from '../../utils/ProtectedRoute';
 
 // Import components
 import Header from '../Header/Header';
@@ -43,17 +43,17 @@ function App() {
           <Route path='/signin' element={<SignIn />} />
           <Route path='/signup' element={<SignUp />} />
 
-          {/* <Route path='/lists' element={<Lists />} /> */}
-          <ProtectedRoute component={Lists} path="/lists" exact />
+          <Route path='/lists' element={<Lists />} />
+          {/* <ProtectedRoute component={Lists} path="/lists" exact /> */}
 
-          {/* <Route path='/lists/createlist' element={<CreateList />} /> */}
-          <ProtectedRoute component={CreateList} path="/lists/createlist" exact />
+          <Route path='/lists/createlist' element={<CreateList />} />
+          {/* <ProtectedRoute component={CreateList} path="/lists/createlist" exact /> */}
 
-          {/* <Route path='/list/:id' element={<List />} /> */}
-          <ProtectedRoute component={List} path="/list/:id" exact />
+          <Route path='/list/:id' element={<List />} />
+          {/* <ProtectedRoute component={List} path="/list/:id" exact /> */}
 
-          {/* <Route path='/list/:id/createitem' element={<CreateItem />} /> */}
-          <ProtectedRoute component={CreateItem} path="/list/:id/createitem" exact />
+          <Route path='/list/:id/createitem' element={<CreateItem />} />
+          {/* <ProtectedRoute component={CreateItem} path="/list/:id/createitem" exact /> */}
 
           <Route path="*" element={<NotFound />} />
         </Routes>

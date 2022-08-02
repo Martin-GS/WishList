@@ -11,7 +11,8 @@ import { Form, Button } from 'react-bootstrap';
 import './createitem.scss';
 
 // Component
-const CreateItem = ({ dataId }) => {
+const CreateItem = () => {
+
   // States
   const [data, setData] = useState(null);
   const [title, setTitle] = useState('');
@@ -23,17 +24,17 @@ const CreateItem = ({ dataId }) => {
   const { id } = useParams();
   const token = getToken();
 
-  const handleSubmit = (evt) => {
+  const handleSubmit = (event) => {
 
-    evt.preventDefault();
+    event.preventDefault();
 
     setLoading(true);
     setIsError(false);
 
     const data = {
-      title: title,
-      url: url,
-      coment: coment,
+      title,
+      url,
+      coment
     };
 
     axios.post(`https://onedream-onewish.herokuapp.com/list/${id}`, data, {
@@ -89,7 +90,7 @@ const CreateItem = ({ dataId }) => {
                 id="title"
                 placeholder="Titre"
                 value={title}
-                onChange={(evt) => setTitle(evt.target.value)}
+                onChange={(event) => setTitle(event.target.value)}
               />
               <Form.Text className="text-muted">
                 45 caractères maximum
@@ -104,7 +105,7 @@ const CreateItem = ({ dataId }) => {
                 id="url"
                 placeholder="Lien (URL)"
                 value={url}
-                onChange={(evt) => setUrl(evt.target.value)}
+                onChange={(event) => setUrl(event.target.value)}
               />
               <Form.Text className="text-muted">
                 255 caractères maximum
@@ -119,7 +120,7 @@ const CreateItem = ({ dataId }) => {
                 id="coment"
                 placeholder="Commentaire"
                 value={coment}
-                onChange={(evt) => setComent(evt.target.value)}
+                onChange={(event) => setComent(event.target.value)}
               />
               <Form.Text className="text-muted">
                 255 caractères maximum

@@ -9,7 +9,7 @@ import { getToken } from '../../utils/auth';
 
 // Import components
 import DeleteItem from './DeleteItem';
-import Loader from '../Loader/loader';
+import Loader from '../Loader/Loader';
 
 // Import style
 import { Button } from 'react-bootstrap';
@@ -55,11 +55,14 @@ function List() {
   // "Life-cycles"
   useEffect(() => {
     loadLists();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
 
     <div className="list">
+
+      {loading && <Loader />}
 
       {/* Title and navigation buttons */}
 
@@ -111,7 +114,7 @@ function List() {
               <div key={item.id} className="col-12 col-md-6 col-lg-4 mb-4 mx-auto">
 
                 <div className="card shadow">
-                  <Link to={{ pathname: item.url }} target="_blank">
+                  <Link to={item.url} target="_blank">
                     <img src={item.image_url} alt={item.id} className="item-image-thumbnail" />
                   </Link>
                   <Link to={{ pathname: item.url }} target="_blank">
@@ -125,7 +128,6 @@ function List() {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center center',
                       }} >
-
                     </div>
                   </Link>
                   <div className="m-2">
