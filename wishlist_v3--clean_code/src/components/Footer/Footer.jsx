@@ -20,7 +20,7 @@ function Footer() {
 
           {/* phantom footer */}
           <div className="row py-3">
-              &nbsp;
+            &nbsp;
           </div>
 
           {/* real footer */}
@@ -28,27 +28,27 @@ function Footer() {
 
             <Navbar className="justify-content-center text-secondary" bg="light" variant="light">
 
-                <div className="px-3 py-2">
-                  &copy; {new Date().getFullYear()} WishList
-                </div>
+              <div className="px-3 py-2">
+                &copy; {new Date().getFullYear()} WishList
+              </div>
 
-                <div className="px-3 py-2">
-                  <Link to="/contact" className="text-secondary text-decoration-none">
-                    Contact
-                  </Link>
-                </div>
+              <div className="px-3 py-2">
+                <Link to="/contact" className="text-secondary text-decoration-none">
+                  Contact
+                </Link>
+              </div>
 
-                <div className="px-3 py-2">
-                  <Link to="/about" className="text-secondary text-decoration-none">
-                    À propos
-                  </Link>
-                </div>
+              <div className="px-3 py-2">
+                <Link to="/about" className="text-secondary text-decoration-none">
+                  À propos
+                </Link>
+              </div>
 
-                <div className="px-3 py-2">
-                  <Link to="/legal" className="text-secondary text-decoration-none">
-                    Mentions légales
-                  </Link>
-                </div>
+              <div className="px-3 py-2">
+                <Link to="/legal" className="text-secondary text-decoration-none">
+                  Mentions légales
+                </Link>
+              </div>
 
             </Navbar>
 
