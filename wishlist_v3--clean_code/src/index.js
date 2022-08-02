@@ -1,8 +1,8 @@
 // Import modules
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router} from 'react-router-dom';
+import reportWebVitals from './utils/reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // Import components
 import App from './components/App/App';

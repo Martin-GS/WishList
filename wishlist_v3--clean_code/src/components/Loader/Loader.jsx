@@ -4,7 +4,7 @@ import React from 'react';
 // Import style
 import './loader.scss';
 
-// Import images
+// Import image
 import insigne from '../../assets/images/logo.png';
 
 // Component

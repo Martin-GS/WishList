@@ -30,7 +30,6 @@ function SignIn() {
       .then((response) => {
         authenticateUser(response.data.token);
         setIsAuth(true);
-        console.log("Signin component : isAuth result :", isAuth);
       })
       .catch((err) => {
         setError(<AlertError />);
@@ -47,7 +46,10 @@ function SignIn() {
     Login(details);
   };
 
-  if (isAuth) { return <Navigate replace to="/lists" />}
+  // Redirection if connected
+  if (isAuth) {
+    return <Navigate replace to="/lists" />
+  }
 
   return (
 
@@ -61,6 +63,8 @@ function SignIn() {
 
       <div className="row mx-auto">
 
+
+        {/* Phantom left div : center form in large screen */}
         <div className="col d-none d-lg-block">
           &nbsp;
         </div>
@@ -69,7 +73,7 @@ function SignIn() {
 
           <Form onSubmit={submitHandler}>
 
-            {/* {(error !== '') ? (<div className="error">{error}</div>) : ''} */}
+            {(error !== '') ? (<div className="error">{error}</div>) : ''}
 
             <Form.Group className="my-4" controlId="formBasicEmail">
               <Form.Label>Adresse eMail</Form.Label>
@@ -135,6 +139,8 @@ function SignIn() {
 
         </div>
 
+
+        {/* Phantom right div : center form in large screen */}
         <div className="col d-none d-lg-block">
           &nbsp;
         </div>

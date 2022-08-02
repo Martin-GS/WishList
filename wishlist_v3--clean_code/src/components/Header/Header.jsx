@@ -2,8 +2,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+// Import auth
+import { isUserAuthenticated } from '../../utils/auth';
+
 // Import style
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import './header.scss';
 
 // Import images
@@ -13,12 +16,12 @@ import logo from '../../assets/images/logo.png';
 // Component
 const Header = () => {
 
-  // const token = isUserAuthenticated();
+  const token = isUserAuthenticated();
 
-  // const logout = () => {
-  //   localStorage.clear();
-  //   window.location.href = '/';
-  // };
+  const logout = () => {
+    localStorage.clear();
+    window.location.href = '/';
+  };
 
   return (
 
@@ -50,7 +53,7 @@ const Header = () => {
             <Nav>
 
               {/* LogOn : display if disconnected / hidden if connected */}
-              {/* {(token !== true) ? */}
+              {(token !== true) ?
                 <Link to="/signup" className="text-secondary text-decoration-none py-2">
                   <span className="navitem">
                     <span className="navitem-img">
@@ -61,12 +64,12 @@ const Header = () => {
                     </span>
                   </span>
                 </Link>
-                {/* : */}
-                {/* <div></div> */}
-              {/* } */}
+                :
+                <div></div>
+              }
 
               {/* LogIn : display if disconnected / hidden if connected */}
-              {/* {(token !== true) ? */}
+              {(token !== true) ?
                 <Link to="/signin" className="text-secondary text-decoration-none py-2">
                   <span className="navitem">
                     <span className="navitem-img">
@@ -77,21 +80,21 @@ const Header = () => {
                     </span>
                   </span>
                 </Link>
-                {/* : */}
-                {/* <div></div> */}
-              {/* } */}
+                :
+                <div></div>
+              }
 
               {/* LogOut : display if connected / hidden if disconnected */}
-              {/* {(token === true) ? */}
+              {(token === true) ?
                 <Link to="/" className="text-secondary text-decoration-none py-2">
                   <span className="navitem">
                     <span className="navitem-img">
                       <Icon.LogOut
                         size="1.7em"
-                        // onClick={() => {
-                        //   const confirmBox = window.confirm("Voulez-vous vous déconnecter ?")
-                        //   if (confirmBox === true) { logout() }
-                        // }}
+                        onClick={() => {
+                          const confirmBox = window.confirm("Voulez-vous vous déconnecter ?")
+                          if (confirmBox === true) { logout() }
+                        }}
                       />
                     </span>
                     <span className="navitem-txt d-md-none">
@@ -99,9 +102,9 @@ const Header = () => {
                     </span>
                   </span>
                 </Link>
-                {/* : */}
-                {/* <div></div> */}
-              {/* } */}
+                :
+                <div></div>
+              }
 
               <hr />
 

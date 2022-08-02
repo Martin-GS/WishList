@@ -1,9 +1,13 @@
 // Import modules
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, Navigate } from 'react-router-dom';
+import axios from 'axios';
 
 // Import components
-// import AlertError from './AlertError';
+import AlertError from './AlertError';
+
+// Import auth
+import { isUserAuthenticated, authenticateUser } from '../../utils/auth';
 
 // Import style
 import { Form, Button } from 'react-bootstrap';
@@ -11,6 +15,39 @@ import './signup.scss';
 
 // Component
 function SignUp() {
+
+  // States
+  const [isAuth, setIsAuth] = useState(isUserAuthenticated());
+  const [details, setDetails] = useState({ pseudo: '', email: '', password: '' });
+  const [error, setError] = useState('');
+
+  // API requests
+  const subscription = (details) => {
+    axios.post('https://onedream-onewish.herokuapp.com/user', {
+      "pseudo": details.pseudo,
+      "email": details.email,
+      "password": details.password
+    })
+      .then((res) => {
+        authenticateUser(res.data.token);
+        setIsAuth(true);
+      })
+      .catch((err) => {
+        console.log("error", error)
+        setError(<AlertError />);
+      });
+  };
+
+  // Redirection if connected
+  if (isAuth) {
+    return <Navigate replace to="/lists" />
+  }
+
+  // Handle submit
+  const submitHandler = (event) => {
+    event.preventDefault();
+    subscription(details);
+  };
 
   return (
 
@@ -24,13 +61,16 @@ function SignUp() {
 
       <div className="row mx-auto">
 
+        {/* Phantom left div : center form in large screen */}
         <div className="col d-none d-lg-block">
           &nbsp;
         </div>
 
         <div className="col col-lg-6">
 
-          <Form className="form">
+          <Form className="form" onSubmit={submitHandler}>
+
+            {(error !== '') ? (<div className="error">{error}</div>) : ''}
 
             <Form.Group className="my-4" controlId="formBasicEmail">
               <Form.Label>Nom d'utilisateur</Form.Label>
@@ -39,6 +79,8 @@ function SignUp() {
                 type="text"
                 name="pseudo"
                 placeholder="Nom d'utilisateur"
+                value={details.name}
+                onChange={(event) => setDetails({ ...details, pseudo: event.target.value })}
               />
               <Form.Text className="text-muted">
                 Un nom unique que seul vous possédez.
@@ -52,6 +94,8 @@ function SignUp() {
                 type="email"
                 name="email"
                 placeholder="Adresse eMail"
+                value={details.name}
+                onChange={(event) => setDetails({ ...details, email: event.target.value })}
               />
               <Form.Text className="text-muted">
                 Vos données sont notre priorité et restent privées.
@@ -65,6 +109,8 @@ function SignUp() {
                 type="password"
                 name="password"
                 placeholder="Mot de passe"
+                value={details.password}
+                onChange={(event) => setDetails({ ...details, password: event.target.value })}
               />
               <Form.Text className="text-muted">
                 Écrivez-le à l'abri des regards et ne le partagez jamais.
@@ -93,7 +139,10 @@ function SignUp() {
 
         </div>
 
-        <div className="col d-none d-lg-block">&nbsp;</div>
+        {/* Phantom right div : center form in large screen */}
+        <div className="col d-none d-lg-block">
+          &nbsp;
+        </div>
 
       </div>
 

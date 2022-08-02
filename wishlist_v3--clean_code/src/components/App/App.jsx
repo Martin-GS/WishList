@@ -1,6 +1,9 @@
 // Import modules
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
+
+// Import ProtectedRoute
+import ProtectedRoute from '../../utils/ProtectedRoute';
 
 // Import components
 import Header from '../Header/Header';
@@ -24,19 +27,6 @@ import './app.scss';
 // Component
 function App() {
 
-  const [inputMail, setInputMail] = useState("");
-  const [inputPassword, setInputPassword] = useState("");
-
-  const onLoginInputChange = (value) => {
-    setInputMail(value);
-  };
-
-  const onLoginFormSubmit = (event) => {
-    event.preventDefault();
-    // console.log("event.target[0].name", event.target[0].name);
-    // console.log("event.target[0].value", event.target[0].value);
-  }
-
   return (
 
     <div className="app">
@@ -50,24 +40,21 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
           <Route path='/legal' element={<Legal />} />
-
-          <Route
-            path='/signin'
-            element={
-              <SignIn
-              inputMail={inputMail}
-              inputPassword={inputPassword}
-              onLoginInputChange={onLoginInputChange}
-              onLoginFormSubmit={onLoginFormSubmit}
-              />
-            }
-          />
-
+          <Route path='/signin' element={<SignIn />} />
           <Route path='/signup' element={<SignUp />} />
-          <Route path='/lists' element={<Lists />} />
-          <Route path='/lists/createlist' element={<CreateList />} />
-          <Route path='/list/:id' element={<List />} />
-          <Route path='/list/:id/createitem' element={<CreateItem />} />
+
+          {/* <Route path='/lists' element={<Lists />} /> */}
+          <ProtectedRoute component={Lists} path="/lists" exact />
+
+          {/* <Route path='/lists/createlist' element={<CreateList />} /> */}
+          <ProtectedRoute component={CreateList} path="/lists/createlist" exact />
+
+          {/* <Route path='/list/:id' element={<List />} /> */}
+          <ProtectedRoute component={List} path="/list/:id" exact />
+
+          {/* <Route path='/list/:id/createitem' element={<CreateItem />} /> */}
+          <ProtectedRoute component={CreateItem} path="/list/:id/createitem" exact />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
 

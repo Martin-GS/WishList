@@ -1,9 +1,11 @@
 // Import modules
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 // Import components
 import DeleteList from './DeleteList'
+import Loader from '../Loader/loader';
 
 // Import style
 import { Button } from 'react-bootstrap';
@@ -12,37 +14,39 @@ import './lists.scss';
 // Component
 function Lists() {
 
-  const getLists = [
-    {
-      id: 1,
-      title: 'Première liste',
-      coment: 'Cette première liste'
-    },
-    {
-      id: 2,
-      title: 'Deuxième liste',
-      coment: 'Cette autre liste'
-    },
-    {
-      id: 3,
-      title: 'Troisième liste',
-      coment: 'Encore une autre liste'
-    },
-    {
-      id: 4,
-      title: 'Quatrième liste',
-      coment: 'Encore une autre liste'
-    },
-    {
-      id: 5,
-      title: 'Cinquième liste',
-      coment: 'Encore une autre liste'
-    }
-  ]
+  // States
+  const [getLists, setGetLists] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const token = getToken();
+
+  // Fetch data from API
+  const fetchLists = () => {
+    setLoading(true);
+    axios.get(`https://onedream-onewish.herokuapp.com/lists`, {
+      headers: { 'Authorization': `Bearer ${token}` }
+    })
+      .then((res) => {
+        setGetLists(res.data);
+      })
+      .catch((err) => {
+        window.location.href = '/notFound';
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+  // "Life-cycles"
+  useEffect(() => {
+    fetchLists();
+  }, []);
 
   return (
 
     <div className="lists">
+
+      {loading && <Loader />}
 
       {/* Title and add-list button */}
       <div className="row mb-5">
@@ -62,8 +66,13 @@ function Lists() {
 
       {/* Display lists : looping data from API */}
       <div className="row">
-        { getLists.map((list) => (
+
+        {!loading && getLists
+          .sort(({ id: previousID }, { id: currentID }) => currentID - previousID)
+          .map((list) => (
+
             <div key={list.id} className="col-12 col-md-6 col-lg-4 mb-3 mx-auto">
+
               <div className="card shadow">
                 <div className="d-flex justify-content-between">
                   <div className="mt-2 mb-1 mx-2">
@@ -74,7 +83,7 @@ function Lists() {
                     </h3>
                   </div>
                   <div className="my-1">
-                    <DeleteList />
+                    <DeleteList getList={list} />
                   </div>
                 </div>
                 <div className="mb-1 mx-2">
@@ -83,8 +92,12 @@ function Lists() {
                   </Link>
                 </div>
               </div>
+
             </div>
-          ))}
+
+          ))
+        }
+
       </div>
 
     </div>

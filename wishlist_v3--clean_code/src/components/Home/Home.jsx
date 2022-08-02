@@ -14,6 +14,7 @@ import card3 from '../../assets/images/home-3.jpg';
 
 // Component
 function Home() {
+
   return (
 
     <div className="home">
