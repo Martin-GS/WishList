@@ -1,5 +1,5 @@
 // Import modules
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 // Import auth
@@ -15,6 +15,9 @@ import logo from '../../assets/images/logo.png';
 
 // Component
 const Header = () => {
+
+  // state of navbar : toggled/expanded on click
+  const [expanded, setExpanded] = useState(false);
 
   const token = isUserAuthenticated();
 
@@ -33,7 +36,12 @@ const Header = () => {
       </div>
 
       {/* real header = Navbar */}
-      <Navbar className="fixed-top shadow" bg="light" expand="md">
+      <Navbar
+        className="fixed-top shadow"
+        bg="light"
+        expand="md"
+        expanded={expanded}
+      >
 
         {/* nav content */}
         <Container fluid>
@@ -46,15 +54,23 @@ const Header = () => {
           </Navbar.Brand>
 
           {/* Navigation */}
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            onClick={() => setExpanded(expanded ? false : "expanded")} />
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className="justify-content-end"
+          >
 
             {/* Nav menu */}
             <Nav>
 
               {/* LogOn : display if disconnected / hidden if connected */}
               {(token !== true) ?
-                <Link to="/signup" className="text-secondary text-decoration-none py-2">
+                <Link to="/signup"
+                  className="text-secondary text-decoration-none py-2"
+                  onClick={() => setExpanded(false)}
+                >
                   <span className="navitem">
                     <span className="navitem-img">
                       <Icon.UserPlus size="1.7em" />
@@ -70,7 +86,10 @@ const Header = () => {
 
               {/* LogIn : display if disconnected / hidden if connected */}
               {(token !== true) ?
-                <Link to="/signin" className="text-secondary text-decoration-none py-2">
+                <Link to="/signin"
+                  className="text-secondary text-decoration-none py-2"
+                  onClick={() => setExpanded(false)}
+                >
                   <span className="navitem">
                     <span className="navitem-img">
                       <Icon.LogIn size="1.7em" />
@@ -86,8 +105,7 @@ const Header = () => {
 
               {/* LogOut : display if connected / hidden if disconnected */}
               {(token === true) ?
-                <span
-                  className="navitem text-secondary text-decoration-none py-2"
+                <span className="navitem text-secondary text-decoration-none py-2"
                   onClick={() => {
                     const confirmBox = window.confirm("Voulez-vous vous déconnecter ?")
                     if (confirmBox === true) { logout() }
@@ -108,7 +126,10 @@ const Header = () => {
               <hr />
 
               {/* Contact link : displayed in mobile version / hidden in desktop version */}
-              <Link to="/contact" className="d-md-none text-secondary text-decoration-none py-2">
+              <Link to="/contact"
+                className="d-md-none text-secondary text-decoration-none py-2"
+                onClick={() => setExpanded(false)}
+              >
                 <span className="navitem">
                   <span className="navitem-img">
                     <Icon.Mail size="1.7em" />
@@ -120,7 +141,10 @@ const Header = () => {
               </Link>
 
               {/* About link : displayed in mobile version / hidden in desktop version */}
-              <Link to="/about" className="d-md-none text-secondary text-decoration-none py-2">
+              <Link to="/about"
+                className="d-md-none text-secondary text-decoration-none py-2"
+                onClick={() => setExpanded(false)}
+              >
                 <span className="navitem">
                   <span className="navitem-img">
                     <Icon.Shield size="1.7em" />
@@ -132,7 +156,10 @@ const Header = () => {
               </Link>
 
               {/* Legal link : displayed in mobile version / hidden in desktop version */}
-              <Link to="/legal" className="d-md-none text-secondary text-decoration-none py-2">
+              <Link to="/legal"
+                className="d-md-none text-secondary text-decoration-none py-2"
+                onClick={() => setExpanded(false)}
+              >
                 <span className="navitem">
                   <span className="navitem-img">
                     <Icon.Square size="1.7em" />
