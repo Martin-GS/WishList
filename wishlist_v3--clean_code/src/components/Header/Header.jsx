@@ -48,7 +48,10 @@ const Header = () => {
 
           {/* Branding */}
           <Navbar.Brand className="py-1">
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() => setExpanded(false)}
+            >
               <img src={logo} alt="Logo WishList" />
             </Link>
           </Navbar.Brand>
