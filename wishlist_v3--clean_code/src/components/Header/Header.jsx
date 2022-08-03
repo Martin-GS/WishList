@@ -86,22 +86,21 @@ const Header = () => {
 
               {/* LogOut : display if connected / hidden if disconnected */}
               {(token === true) ?
-                <Link to="/" className="text-secondary text-decoration-none py-2">
-                  <span className="navitem">
-                    <span className="navitem-img">
-                      <Icon.LogOut
-                        size="1.7em"
-                        onClick={() => {
-                          const confirmBox = window.confirm("Voulez-vous vous déconnecter ?")
-                          if (confirmBox === true) { logout() }
-                        }}
-                      />
-                    </span>
-                    <span className="navitem-txt d-md-none">
-                      Déconnexion
-                    </span>
+                <span
+                  className="navitem text-secondary text-decoration-none py-2"
+                  onClick={() => {
+                    const confirmBox = window.confirm("Voulez-vous vous déconnecter ?")
+                    if (confirmBox === true) { logout() }
+                  }}>
+                  <span className="navitem-img">
+                    <Icon.LogOut
+                      size="1.7em"
+                    />
                   </span>
-                </Link>
+                  <span className="navitem-txt d-md-none">
+                    Déconnexion
+                  </span>
+                </span>
                 :
                 <div></div>
               }
