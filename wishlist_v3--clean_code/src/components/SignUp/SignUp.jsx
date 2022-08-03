@@ -81,9 +81,6 @@ function SignUp() {
                 value={details.name}
                 onChange={(event) => setDetails({ ...details, pseudo: event.target.value })}
               />
-              <Form.Text className="text-muted">
-                Un nom unique que seul vous possédez.
-              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4" controlId="formBasicEmail">
@@ -96,9 +93,6 @@ function SignUp() {
                 value={details.name}
                 onChange={(event) => setDetails({ ...details, email: event.target.value })}
               />
-              <Form.Text className="text-muted">
-                Vos données sont notre priorité et restent privées.
-              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4" controlId="formBasicPassword">
@@ -111,9 +105,6 @@ function SignUp() {
                 value={details.password}
                 onChange={(event) => setDetails({ ...details, password: event.target.value })}
               />
-              <Form.Text className="text-muted">
-                Écrivez-le à l'abri des regards et ne le partagez jamais.
-              </Form.Text>
             </Form.Group>
 
             <div className="row">
