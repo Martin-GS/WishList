@@ -1,31 +1,24 @@
-// Imports packages and hooks
 import React, { useState } from 'react';
 import axios from 'axios';
-
-// Import auth
-import { getToken } from '../../utils/auth';
-
-// Import style
 import { Button } from 'react-bootstrap';
+import * as Icon from 'react-feather';
+import { getToken } from '../../utils/auth';
 import './lists.scss';
 
-// Import images
-import * as Icon from 'react-feather';
+const DeleteList = ({ list, fetchLists }) => {
 
-// Component
-const DeleteList = ({ getList }) => {
-
-  // States
   // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [isError, setIsError] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [data, setData] = useState(null);
 
-  const listid = getList.id;
+  const listid = list.id;
   const token = getToken();
 
-  const handleRemove = () => {
+  const handleDelete = () => {
+
     setLoading(true);
     setIsError(false);
 
@@ -40,12 +33,10 @@ const DeleteList = ({ getList }) => {
       })
       .finally(() => {
         setLoading(false);
+        fetchLists();
       });
-  };
 
-  if (data) {
-    window.location.reload(false);
-  }
+  };
 
   return (
     <Button
@@ -55,7 +46,7 @@ const DeleteList = ({ getList }) => {
           "Voulez vous supprimer cette liste ?"
         );
         if (confirmBox === true) {
-          handleRemove()
+          handleDelete()
         }
       }}
     >
@@ -65,5 +56,4 @@ const DeleteList = ({ getList }) => {
 
 };
 
-// Export component
 export default DeleteList;

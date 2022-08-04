@@ -1,25 +1,17 @@
-// Import modules
 import React, { useState } from 'react';
 import axios from 'axios';
-
-// Import auth
-import { getToken } from '../../utils/auth';
-
-// Import style
 import { Button } from 'react-bootstrap';
+import * as Icon from 'react-feather';
+import { getToken } from '../../utils/auth';
 import './list.scss';
 
-// Import images
-import * as Icon from 'react-feather';
+const DeleteItem = ({ itemObj, listId, loadLists }) => {
 
-// Component
-const DeleteItem = ({ itemObj, listId }) => {
-
-  // States
   // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [isError, setIsError] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [data, setData] = useState(null);
 
   const itemid = itemObj.id;
@@ -28,6 +20,7 @@ const DeleteItem = ({ itemObj, listId }) => {
   const token = getToken();
 
   const handleDelete = (evt) => {
+
     setLoading(true);
     setIsError(false);
 
@@ -40,12 +33,9 @@ const DeleteItem = ({ itemObj, listId }) => {
         setIsError(true);
       }).finally(() => {
         setLoading(false);
+        loadLists();
       });
   };
-
-  if (data) {
-    window.location.reload(false);
-  }
 
   return (
     <Button
@@ -64,5 +54,4 @@ const DeleteItem = ({ itemObj, listId }) => {
   );
 };
 
-// Export component
 export default DeleteItem;

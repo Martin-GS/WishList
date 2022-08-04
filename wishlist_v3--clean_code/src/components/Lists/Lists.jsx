@@ -87,7 +87,7 @@ function Lists() {
                     </h3>
                   </div>
                   <div className="my-1">
-                    <DeleteList getList={list} />
+                    <DeleteList list={list} fetchLists={fetchLists} />
                   </div>
                 </div>
                 <div className="mb-1 mx-2">

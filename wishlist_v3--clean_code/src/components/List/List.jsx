@@ -140,7 +140,7 @@ function List() {
 
                 <div className="row d-flex justify-content-around mt-2">
                   <div className="col-3">
-                    <DeleteItem itemObj={item} listId={dataId} />
+                    <DeleteItem itemObj={item} listId={dataId} loadLists={loadLists} />
                   </div>
                   <div className="col-9">
                     <InlineShareButtons
