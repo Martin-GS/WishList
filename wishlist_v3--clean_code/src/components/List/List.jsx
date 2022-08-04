@@ -82,9 +82,9 @@ function List() {
           </Link>
         </div>
         {/* Large AND small screens */}
-        <div className="list-title">
+        <div className="list-title text-center mx-1">
           <h2>{dataTitle}</h2>
-          <p className="text-secondary">{dataComent}</p>
+          <p className="text-secondary text-center mx-1">{dataComent}</p>
         </div>
         <div>
           {/* Small screen */}

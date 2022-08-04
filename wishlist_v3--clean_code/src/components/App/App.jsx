@@ -47,7 +47,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/legal' element={<Legal />} />
           <Route path='/signin' element={<SignIn changeIsAuth={changeIsAuth} />} />
-          <Route path='/signup' element={<SignUp />} />
+          <Route path='/signup' element={<SignUp changeIsAuth={changeIsAuth} />} />
           <Route element={<PrivateRoutes />}>
             <Route path='/lists' element={<Lists />} />
             <Route path='/lists/createlist' element={<CreateList />} />

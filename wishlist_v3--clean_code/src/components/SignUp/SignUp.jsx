@@ -5,6 +5,7 @@ import axios from 'axios';
 
 // Import components
 import AlertError from './AlertError';
+import Loader from '../Loader/Loader';
 
 // Import auth
 import { isUserAuthenticated, authenticateUser } from '../../utils/auth';
@@ -14,15 +15,17 @@ import { Form, Button } from 'react-bootstrap';
 import './signup.scss';
 
 // Component
-function SignUp() {
+function SignUp({ changeIsAuth }) {
 
   // States
   const [isAuth, setIsAuth] = useState(isUserAuthenticated());
   const [details, setDetails] = useState({ pseudo: '', email: '', password: '' });
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   // API requests
   const subscription = (details) => {
+    setLoading(true);
     axios.post('https://onedream-onewish.herokuapp.com/user', {
       "pseudo": details.pseudo,
       "email": details.email,
@@ -31,9 +34,13 @@ function SignUp() {
       .then((res) => {
         authenticateUser(res.data.token);
         setIsAuth(true);
+        changeIsAuth(true);
       })
       .catch((err) => {
         setError(<AlertError />);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -51,6 +58,8 @@ function SignUp() {
   return (
 
     <div className="signup">
+
+      {loading && <Loader />}
 
       <div className="row mx-auto">
         <div className="col text-center">

@@ -2,8 +2,7 @@
 
 ---
 
-- Outils
-  - [prop-types](https://github.com/facebook/prop-types)
+- [ ] reset lorsque mauvais signin/signup... comment faire pour pouvoir remplir le formulaire sans refraichir la page ? Car sans le force-refresh le bouton de validation ne fonctionne pas.
 
 ---
 
