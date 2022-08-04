@@ -1,8 +1,8 @@
 // Import modules
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 
-// Import ProtectedRoute
+// Import PrivateRoutes
 import PrivateRoutes from '../../utils/PrivateRoutes';
 
 // Import components
@@ -27,11 +27,17 @@ import './app.scss';
 // Component
 function App() {
 
+  const [isAuth, setIisAuth] = useState([]);
+
+  const changeIsAuth = (value) => {
+    setIisAuth(value);
+  };
+
   return (
 
     <div className="app">
 
-      <Header />
+      <Header isAuth={isAuth} />
 
       <Container fluid>
 
@@ -40,7 +46,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
           <Route path='/legal' element={<Legal />} />
-          <Route path='/signin' element={<SignIn />} />
+          <Route path='/signin' element={<SignIn changeIsAuth={changeIsAuth} />} />
           <Route path='/signup' element={<SignUp />} />
           <Route element={<PrivateRoutes />}>
             <Route path='/lists' element={<Lists />} />

@@ -2,9 +2,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
-// Import auth
-import { isUserAuthenticated } from '../../utils/auth';
-
 // Import style
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import './header.scss';
@@ -14,11 +11,9 @@ import * as Icon from 'react-feather';
 import logo from '../../assets/images/logo.png';
 
 // Component
-const Header = () => {
+const Header = ({ isAuth }) => {
 
-  // state of navbar : toggled/expanded on click
   const [expanded, setExpanded] = useState(false);
-  const [isAuth] = useState(isUserAuthenticated());
 
   const logout = () => {
     localStorage.clear();

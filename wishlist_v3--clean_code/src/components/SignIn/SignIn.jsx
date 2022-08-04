@@ -14,7 +14,7 @@ import { Form, Button } from 'react-bootstrap';
 import './signin.scss';
 
 // Component
-function SignIn() {
+function SignIn({ changeIsAuth }) {
 
   // State
   const [details, setDetails] = useState({ email: '', password: '' });
@@ -30,6 +30,7 @@ function SignIn() {
       .then((response) => {
         authenticateUser(response.data.token);
         setIsAuth(true);
+        changeIsAuth(true);
       })
       .catch((err) => {
         setError(<AlertError />);
