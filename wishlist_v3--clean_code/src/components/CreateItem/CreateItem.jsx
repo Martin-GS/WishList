@@ -1,25 +1,22 @@
-// Import modules
 import React, { useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-// Import auth
 import { getToken } from '../../utils/auth';
+import AlertError from '../AlertError/AlertError';
+import Loader from '../Loader/Loader';
 
-// Import style
-import { Form, Button } from 'react-bootstrap';
 import './createitem.scss';
 
-// Component
 const CreateItem = () => {
 
-  // States
   const [data, setData] = useState(null);
   const [title, setTitle] = useState('');
   const [url, setUrl] = useState('');
   const [coment, setComent] = useState('');
   const [loading, setLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [error, setError] = useState('');
 
   const { id } = useParams();
   const token = getToken();
@@ -29,7 +26,7 @@ const CreateItem = () => {
     event.preventDefault();
 
     setLoading(true);
-    setIsError(false);
+    setError(false);
 
     const data = {
       title,
@@ -46,13 +43,12 @@ const CreateItem = () => {
         setUrl('');
         setComent('');
       }).catch((err) => {
-        setIsError(true);
+        setError(<AlertError />);
       }).finally(() => {
         setLoading(false);
       });
   };
 
-  // Redirect if data
   if (data) {
     return <Navigate replace to={`/list/${id}`} />
   }
@@ -61,12 +57,12 @@ const CreateItem = () => {
 
     <div className="createitem">
 
+      {loading && <Loader />}
+
       {/* Page title */}
 
-      <div className="row">
-        <div className="col text-center">
-          <h2>Nouvel article</h2>
-        </div>
+      <div className="row text-center">
+        <h2>Nouvel article</h2>
       </div>
 
       {/* New item form */}
@@ -82,6 +78,10 @@ const CreateItem = () => {
 
           <Form className="form">
 
+            {
+              (error !== '') ? (<div className="error">{error}</div>) : ''
+            }
+
             <Form.Group className="my-4">
               <Form.Label>Titre</Form.Label>
               <Form.Control
@@ -92,9 +92,6 @@ const CreateItem = () => {
                 value={title}
                 onChange={(event) => setTitle(event.target.value)}
               />
-              <Form.Text className="text-muted">
-                45 caractères maximum
-              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4">
@@ -107,9 +104,6 @@ const CreateItem = () => {
                 value={url}
                 onChange={(event) => setUrl(event.target.value)}
               />
-              <Form.Text className="text-muted">
-                255 caractères maximum
-              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4">
@@ -122,12 +116,7 @@ const CreateItem = () => {
                 value={coment}
                 onChange={(event) => setComent(event.target.value)}
               />
-              <Form.Text className="text-muted">
-                255 caractères maximum
-              </Form.Text>
             </Form.Group>
-
-            {isError && <span className="createitem-form-error">Il y a eu une erreur.</span>}
 
             <div className="row">
 
@@ -145,8 +134,8 @@ const CreateItem = () => {
                   variant="primary"
                   type="submit"
                   onClick={handleSubmit}
-                  disabled={loading}>
-                  {loading ? 'Loading...' : 'Valider'}
+                >
+                  Valider
                 </Button>
               </div>
 

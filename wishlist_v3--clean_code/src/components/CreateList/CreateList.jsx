@@ -1,24 +1,21 @@
-// Import modules
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-// Import auth
 import { getToken } from '../../utils/auth';
+import AlertError from '../AlertError/AlertError';
+import Loader from '../Loader/Loader';
 
-// Import style
-import { Form, Button } from 'react-bootstrap';
 import './createlist.scss';
 
-// Component
 function CreateList() {
 
-  // States
   const [data, setData] = useState(null);
   const [title, setTitle] = useState('');
   const [coment, setComent] = useState('');
   const [loading, setLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [error, setError] = useState('');
 
   const token = getToken();
 
@@ -27,7 +24,7 @@ function CreateList() {
     event.preventDefault();
 
     setLoading(true);
-    setIsError(false);
+    setError(false);
 
     const data = {
       title,
@@ -43,13 +40,12 @@ function CreateList() {
         setComent('');
       })
       .catch((err) => {
-        setIsError(true);
+        setError(<AlertError />);
       }).finally(() => {
         setLoading(false);
       });
   };
 
-  // Redirection if data
   if (data) {
     return <Navigate replace to="/lists" />
   }
@@ -57,6 +53,8 @@ function CreateList() {
   return (
 
     <div className="createlist">
+
+      {loading && <Loader />}
 
       {/* Page title */}
 
@@ -77,6 +75,10 @@ function CreateList() {
 
           <Form className="form">
 
+            {
+              (error !== '') ? (<div className="error">{error}</div>) : ''
+            }
+
             <Form.Group className="my-4">
               <Form.Label>Titre</Form.Label>
               <Form.Control
@@ -87,9 +89,6 @@ function CreateList() {
                 value={title}
                 onChange={event => setTitle(event.target.value)}
               />
-              <Form.Text className="text-muted">
-                45 caractères maximum
-              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4">
@@ -102,12 +101,7 @@ function CreateList() {
                 value={coment}
                 onChange={(event) => setComent(event.target.value)}
               />
-              <Form.Text className="text-muted">
-                255 caractères maximum
-              </Form.Text>
             </Form.Group>
-
-            {isError && <span className="createlist-form-error">Il y a eu une erreur.</span>}
 
             <div className="row">
 
@@ -125,8 +119,8 @@ function CreateList() {
                   variant="primary"
                   type="submit"
                   onClick={handleSubmit}
-                  disabled={loading}>
-                  {loading ? 'Loading...' : 'Valider'}
+                >
+                  Valider
                 </Button>
               </div>
             </div>

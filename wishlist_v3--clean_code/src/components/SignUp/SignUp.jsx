@@ -4,7 +4,7 @@ import { Link, Navigate } from 'react-router-dom';
 import axios from 'axios';
 
 // Import components
-import AlertError from './AlertError';
+import AlertError from '../AlertError/AlertError';
 import Loader from '../Loader/Loader';
 
 // Import auth

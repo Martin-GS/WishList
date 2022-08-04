@@ -1,57 +1,50 @@
-// Import modules
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-// Import components
-import AlertError from './AlertError';
+import AlertError from '../AlertError/AlertError';
 import Loader from '../Loader/Loader';
 
-// Import Auth
 import { isUserAuthenticated, authenticateUser } from '../../utils/auth';
 
-// Import style
-import { Form, Button } from 'react-bootstrap';
 import './signin.scss';
 
-// Component
 function SignIn({ changeIsAuth }) {
 
-  // State
   const [details, setDetails] = useState({ email: '', password: '' });
   const [isAuth, setIsAuth] = useState(isUserAuthenticated());
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // API requests
   const Login = (details) => {
+
     setLoading(true);
+    setError(false);
+
     axios.post('https://onedream-onewish.herokuapp.com/login', {
       "email": details.email,
       "password": details.password,
     })
       .then((response) => {
-        setLoading(true);
         authenticateUser(response.data.token);
         setIsAuth(true);
         changeIsAuth(true);
       })
       .catch((err) => {
-        setLoading(true);
         setError(<AlertError />);
       })
       .finally(() => {
         setLoading(false);
       });
+
   };
 
-  // Handle submit
   const submitHandler = event => {
     event.preventDefault();
     Login(details);
   };
 
-  // Redirection if connected
   if (isAuth) {
     return <Navigate replace to="/lists" />
   }
@@ -80,7 +73,9 @@ function SignIn({ changeIsAuth }) {
 
           <Form onSubmit={submitHandler}>
 
-            {(error !== '') ? (<div className="error">{error}</div>) : ''}
+            {
+              (error !== '') ? (<div className="error">{error}</div>) : ''
+            }
 
             <Form.Group className="my-4" controlId="formBasicEmail">
               <Form.Label>Adresse eMail</Form.Label>
