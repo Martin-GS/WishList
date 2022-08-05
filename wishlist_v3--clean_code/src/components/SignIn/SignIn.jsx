@@ -2,15 +2,11 @@ import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
-
+import { isUserAuthenticated, authenticateUser } from '../../utils/auth';
 import AlertError from '../AlertError/AlertError';
 import Loader from '../Loader/Loader';
 
-import { isUserAuthenticated, authenticateUser } from '../../utils/auth';
-
-import './signin.scss';
-
-function SignIn({ changeIsAuth }) {
+function SignIn({ replaceValueIfAuth }) {
 
   const [details, setDetails] = useState({ email: '', password: '' });
   const [isAuth, setIsAuth] = useState(isUserAuthenticated());
@@ -29,7 +25,7 @@ function SignIn({ changeIsAuth }) {
       .then((response) => {
         authenticateUser(response.data.token);
         setIsAuth(true);
-        changeIsAuth(true);
+        replaceValueIfAuth(true);
       })
       .catch((err) => {
         setError(<AlertError />);
@@ -89,6 +85,9 @@ function SignIn({ changeIsAuth }) {
                   { ...details, email: event.target.value }
                 )}
               />
+              <Form.Text className="text-muted">
+                Vos données sont notre priorité et restent privées.
+              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4" controlId="formBasicPassword">
@@ -103,6 +102,9 @@ function SignIn({ changeIsAuth }) {
                   { ...details, password: event.target.value }
                 )}
               />
+              <Form.Text className="text-muted">
+                Écrivez votre mot de passe à l'abri des regards indiscrets et ne le partagez jamais.
+              </Form.Text>
             </Form.Group>
 
             <div className="row">
@@ -149,5 +151,4 @@ function SignIn({ changeIsAuth }) {
 
 }
 
-// Export
 export default SignIn;

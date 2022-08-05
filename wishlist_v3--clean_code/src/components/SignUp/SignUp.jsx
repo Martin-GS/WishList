@@ -1,29 +1,18 @@
-// Import modules
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
-
-// Import components
 import AlertError from '../AlertError/AlertError';
 import Loader from '../Loader/Loader';
-
-// Import auth
 import { isUserAuthenticated, authenticateUser } from '../../utils/auth';
 
-// Import style
-import { Form, Button } from 'react-bootstrap';
-import './signup.scss';
+function SignUp({ replaceValueIfAuth }) {
 
-// Component
-function SignUp({ changeIsAuth }) {
-
-  // States
   const [isAuth, setIsAuth] = useState(isUserAuthenticated());
   const [details, setDetails] = useState({ pseudo: '', email: '', password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // API requests
   const subscription = (details) => {
     setLoading(true);
     axios.post('https://onedream-onewish.herokuapp.com/user', {
@@ -34,7 +23,7 @@ function SignUp({ changeIsAuth }) {
       .then((res) => {
         authenticateUser(res.data.token);
         setIsAuth(true);
-        changeIsAuth(true);
+        replaceValueIfAuth(true);
       })
       .catch((err) => {
         setError(<AlertError />);
@@ -44,12 +33,10 @@ function SignUp({ changeIsAuth }) {
       });
   };
 
-  // Redirection if connected
   if (isAuth) {
     return <Navigate replace to="/lists" />
   }
 
-  // Handle submit
   const submitHandler = (event) => {
     event.preventDefault();
     subscription(details);
@@ -90,6 +77,9 @@ function SignUp({ changeIsAuth }) {
                 value={details.name}
                 onChange={(event) => setDetails({ ...details, pseudo: event.target.value })}
               />
+              <Form.Text className="text-muted">
+                Le nom d'utilisateur est un nom unique que seul vous possédez.
+              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4" controlId="formBasicEmail">
@@ -102,6 +92,9 @@ function SignUp({ changeIsAuth }) {
                 value={details.name}
                 onChange={(event) => setDetails({ ...details, email: event.target.value })}
               />
+              <Form.Text className="text-muted">
+                Vos données sont notre priorité et restent privées.
+              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4" controlId="formBasicPassword">
@@ -114,6 +107,9 @@ function SignUp({ changeIsAuth }) {
                 value={details.password}
                 onChange={(event) => setDetails({ ...details, password: event.target.value })}
               />
+              <Form.Text className="text-muted">
+                Écrivez votre mot de passe à l'abri des regards indiscrets et ne le partagez jamais.
+              </Form.Text>
             </Form.Group>
 
             <div className="row">

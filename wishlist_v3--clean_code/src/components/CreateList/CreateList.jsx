@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
-
 import { getToken } from '../../utils/auth';
 import AlertError from '../AlertError/AlertError';
 import Loader from '../Loader/Loader';
-
-import './createlist.scss';
 
 function CreateList() {
 
@@ -89,6 +86,9 @@ function CreateList() {
                 value={title}
                 onChange={event => setTitle(event.target.value)}
               />
+              <Form.Text className="text-muted">
+                45 caractères maximum
+              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4">
@@ -101,6 +101,9 @@ function CreateList() {
                 value={coment}
                 onChange={(event) => setComent(event.target.value)}
               />
+              <Form.Text className="text-muted">
+                255 caractères maximum
+              </Form.Text>
             </Form.Group>
 
             <div className="row">
@@ -142,5 +145,4 @@ function CreateList() {
 
 }
 
-// Export
 export default CreateList;

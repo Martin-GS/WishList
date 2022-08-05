@@ -1,11 +1,7 @@
-// Import modules
 import React, { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
-
-// Import PrivateRoutes
+import Container from 'react-bootstrap/Container';
 import PrivateRoutes from '../../utils/PrivateRoutes';
-
-// Import components
 import Header from '../Header/Header';
 import Home from '../Home/Home';
 import SignIn from '../SignIn/SignIn';
@@ -19,25 +15,21 @@ import Footer from '../Footer/Footer';
 import Contact from '../Contact/Contact';
 import About from '../About/About';
 import Legal from '../Legal/Legal';
-
-// Import style
-import Container from 'react-bootstrap/Container';
 import './app.scss';
 
-// Component
 function App() {
 
-  const [isAuth, setIisAuth] = useState([]);
+  const [updateUI, setUpdateUI] = useState([]);
 
-  const changeIsAuth = (value) => {
-    setIisAuth(value);
+  const replaceValueIfAuth = (value) => {
+    setUpdateUI(value);
   };
 
   return (
 
     <div className="app">
 
-      <Header isAuth={isAuth} />
+      <Header updateUI={updateUI} />
 
       <Container fluid>
 
@@ -46,8 +38,8 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
           <Route path='/legal' element={<Legal />} />
-          <Route path='/signin' element={<SignIn changeIsAuth={changeIsAuth} />} />
-          <Route path='/signup' element={<SignUp changeIsAuth={changeIsAuth} />} />
+          <Route path='/signin' element={<SignIn replaceValueIfAuth={replaceValueIfAuth} />} />
+          <Route path='/signup' element={<SignUp replaceValueIfAuth={replaceValueIfAuth} />} />
           <Route element={<PrivateRoutes />}>
             <Route path='/lists' element={<Lists />} />
             <Route path='/lists/createlist' element={<CreateList />} />
@@ -66,5 +58,4 @@ function App() {
   );
 }
 
-// Export
 export default App;

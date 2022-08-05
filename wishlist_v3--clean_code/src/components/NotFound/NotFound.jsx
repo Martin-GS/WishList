@@ -1,15 +1,10 @@
 // Import modules
 import React from 'react';
 import { Link } from "react-router-dom";
-
-// Import style
 import { Button } from 'react-bootstrap';
+import notfound from '../../assets/images/notfound.jpg';
 import './notfound.scss';
 
-// Import images
-import notfound from '../../assets/images/notfound.jpg';
-
-// Component
 function NotFound() {
 
   return (
@@ -42,5 +37,4 @@ function NotFound() {
 
 }
 
-// Export
 export default NotFound;

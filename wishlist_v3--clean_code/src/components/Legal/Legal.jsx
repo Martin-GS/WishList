@@ -1,12 +1,8 @@
-// Import modules
 import React from 'react';
 import { Link } from "react-router-dom";
-
-// Import style
 import { Button } from 'react-bootstrap';
 import './legal.scss';
 
-// Component
 function Legal() {
 
   return (
@@ -75,5 +71,4 @@ function Legal() {
   );
 }
 
-// Export
 export default Legal;

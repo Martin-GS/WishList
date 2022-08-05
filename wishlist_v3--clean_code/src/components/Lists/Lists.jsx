@@ -1,29 +1,18 @@
-// Import modules
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
-
-// Import auth
+import { Button } from 'react-bootstrap';
 import { getToken } from '../../utils/auth';
-
-// Import components
 import DeleteList from './DeleteList'
 import Loader from '../Loader/Loader';
 
-// Import style
-import { Button } from 'react-bootstrap';
-import './lists.scss';
-
-// Component
 function Lists() {
 
-  // States
   const [getLists, setGetLists] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const token = getToken();
 
-  // Fetch data from API
   const fetchLists = () => {
     setLoading(true);
     axios.get(`https://onedream-onewish.herokuapp.com/lists`, {
@@ -40,7 +29,6 @@ function Lists() {
       });
   };
 
-  // "Life-cycles"
   useEffect(() => {
     fetchLists();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -110,5 +98,4 @@ function Lists() {
 
 }
 
-// Export
 export default Lists;

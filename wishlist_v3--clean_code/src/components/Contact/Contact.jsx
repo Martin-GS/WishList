@@ -1,15 +1,10 @@
 // Import modules
 import React from 'react';
 import { Link } from "react-router-dom";
-
-// Import style
 import { Form, Button, Alert } from 'react-bootstrap';
+import * as Icon from 'react-feather';
 import './contact.scss';
 
-// Import images
-import * as Icon from 'react-feather';
-
-// Component
 function Contact() {
 
   return (
@@ -77,7 +72,6 @@ function Contact() {
               </div>
 
               <div className="col text-center">
-                {/* Submit disabled */}
                 {/* <Button className="btn btn-primary text-white shadow my-4" type="submit"> */}
                 <Button className="btn btn-primary text-white shadow my-4" type="button">
                   Valider
@@ -101,5 +95,4 @@ function Contact() {
   );
 }
 
-// Export
 export default Contact;

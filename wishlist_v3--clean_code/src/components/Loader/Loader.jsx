@@ -1,13 +1,8 @@
-// Import modules
 import React from 'react';
 
-// Import style
 import './loader.scss';
-
-// Import image
 import insigne from '../../assets/images/logo.png';
 
-// Component
 const Loader = () => (
   <div className="row">
     <div className="col">
@@ -16,5 +11,4 @@ const Loader = () => (
   </div>
 );
 
-// Export component
 export default Loader;

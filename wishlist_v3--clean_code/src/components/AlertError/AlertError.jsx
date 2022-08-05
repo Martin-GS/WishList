@@ -1,25 +1,18 @@
-// Import modules
 import React, { useState } from 'react';
-
-// Import style
 import { Modal, Button } from 'react-bootstrap';
 
-// Component
 const AlertError = () => {
 
-  // State
   const [show, setShow] = useState(true);
 
-  const handleClose = (e) => {
-    e.preventDefault();
+  const handleClose = (event) => {
+    event.preventDefault();
     setShow(false);
-    // window.location.reload();
   };
 
   return (
 
     <div className="alerterror">
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>
           <Modal.Title>Une erreur s'est produite.</Modal.Title>
@@ -33,12 +26,10 @@ const AlertError = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-
     </div>
 
   );
 
 };
 
-// Export component
 export default AlertError;

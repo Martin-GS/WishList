@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
-
 import { getToken } from '../../utils/auth';
 import AlertError from '../AlertError/AlertError';
 import Loader from '../Loader/Loader';
-
-import './createitem.scss';
 
 const CreateItem = () => {
 
@@ -92,6 +89,9 @@ const CreateItem = () => {
                 value={title}
                 onChange={(event) => setTitle(event.target.value)}
               />
+              <Form.Text className="text-muted">
+                45 caractères maximum
+              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4">
@@ -104,6 +104,9 @@ const CreateItem = () => {
                 value={url}
                 onChange={(event) => setUrl(event.target.value)}
               />
+              <Form.Text className="text-muted">
+                255 caractères maximum
+              </Form.Text>
             </Form.Group>
 
             <Form.Group className="my-4">
@@ -116,6 +119,9 @@ const CreateItem = () => {
                 value={coment}
                 onChange={(event) => setComent(event.target.value)}
               />
+              <Form.Text className="text-muted">
+                255 caractères maximum
+              </Form.Text>
             </Form.Group>
 
             <div className="row">
@@ -157,5 +163,4 @@ const CreateItem = () => {
   );
 };
 
-// Export component
 export default CreateItem;

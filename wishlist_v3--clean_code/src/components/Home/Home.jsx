@@ -1,27 +1,17 @@
-// Import modules
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-
-// Import Auth
-import { isUserAuthenticated } from '../../utils/auth';
-
-// Import style
 import { Button } from 'react-bootstrap';
-import './home.scss';
-
-// Import images
+import { isUserAuthenticated } from '../../utils/auth';
 import insigne from '../../assets/images/insigne.png';
 import card1 from '../../assets/images/home-1.jpg';
 import card2 from '../../assets/images/home-2.jpg';
 import card3 from '../../assets/images/home-3.jpg';
+import './home.scss';
 
-// Component
 function Home() {
 
-  // eslint-disable-next-line no-unused-vars
-  const [isAuth, setIsAuth] = useState(isUserAuthenticated());
+  const [isAuth,] = useState(isUserAuthenticated());
 
-  // Redirection if connected
   if (isAuth) {
     return <Navigate replace to="/lists" />
   }
@@ -111,5 +101,4 @@ function Home() {
   );
 }
 
-// Export
 export default Home;

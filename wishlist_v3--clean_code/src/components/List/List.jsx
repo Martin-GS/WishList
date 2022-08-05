@@ -2,23 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { Button } from 'react-bootstrap';
+import * as Icon from 'react-feather';
 import { InlineShareButtons } from 'sharethis-reactjs';
-
-// Import auth
 import { getToken } from '../../utils/auth';
-
-// Import components
 import DeleteItem from './DeleteItem';
 import Loader from '../Loader/Loader';
-
-// Import style
-import { Button } from 'react-bootstrap';
 import './list.scss';
 
-// Import images
-import * as Icon from 'react-feather';
-
-// Component
 function List() {
 
   const [dataId, setDataId] = useState([]);
@@ -30,7 +21,6 @@ function List() {
   const token = getToken();
   const { id } = useParams();
 
-  // Fetch data from API
   const loadLists = () => {
     setLoading(true);
     axios.get(`https://onedream-onewish.herokuapp.com/list/${id}?withItems=true`, {
@@ -52,7 +42,6 @@ function List() {
       });
   };
 
-  // "Life-cycles"
   useEffect(() => {
     loadLists();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -145,11 +134,11 @@ function List() {
                   <div className="col-9">
                     <InlineShareButtons
                       config={{
-                        alignment: 'right', // left, center or right
-                        color: 'white', // social or white
-                        enabled: true, // true or false
+                        alignment: 'right',
+                        color: 'white',
+                        enabled: true,
                         font_size: 16,
-                        labels: 'null', // cta, counts or null
+                        labels: 'null',
                         language: 'fr',
                         networks: [
                           'whatsapp',
@@ -158,16 +147,16 @@ function List() {
                           'sharethis',
                         ],
                         padding: 8,
-                        radius: 4, // radius of buttons
+                        radius: 4,
                         show_total: false,
-                        size: 30, // size of buttons
+                        size: 30,
                         url: `${item.url}`,
-                        image: `${item.image_url}`, // defaults to og:image or twitter:image
-                        description: `${item.coment}`, // defaults to og:description or twitter:description
-                        title: `${item.title}`, // defaults to og:title or twitter:title
-                        message: `${item.coment}`, // only for email sharing
-                        subject: 'Bonjour, regarde ce que j\'ai trouvé', // only for email sharing
-                        username: 'Bonjour, regardez ce que j\'ai trouvé' // only for twitter sharing
+                        image: `${item.image_url}`,
+                        description: `${item.coment}`,
+                        title: `${item.title}`,
+                        message: `${item.coment}`,
+                        subject: 'Bonjour, regarde ce que j\'ai trouvé',
+                        username: 'Bonjour, regardez ce que j\'ai trouvé'
                       }}
                     />
                   </div>
@@ -186,5 +175,4 @@ function List() {
 
 }
 
-// Export
 export default List;

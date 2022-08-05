@@ -1,12 +1,8 @@
 // Imports modules
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-// Import style
 import { Container, Navbar } from 'react-bootstrap';
-import './footer.scss';
 
-// Component
 function Footer() {
 
   return (
@@ -64,5 +60,4 @@ function Footer() {
 
 }
 
-// Export
 export default Footer;

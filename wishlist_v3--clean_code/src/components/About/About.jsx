@@ -1,18 +1,12 @@
 // Import modules
 import React from 'react';
 import { Link } from "react-router-dom";
-
-// Import style
 import { Card, Button } from 'react-bootstrap';
-import './about.scss';
-
-// Import images
 import martin from '../../assets/images/about-martin.png';
 import coni from '../../assets/images/about-coni.png';
 import nico from '../../assets/images/about-nico.png';
 import tommy from '../../assets/images/about-tommy.png';
 
-// Component
 function About() {
 
   return (
@@ -162,5 +156,4 @@ function About() {
   );
 }
 
-// Export
 export default About;

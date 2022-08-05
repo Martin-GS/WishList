@@ -1,17 +1,11 @@
-// Import modules
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
-// Import style
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import './header.scss';
-
-// Import images
 import * as Icon from 'react-feather';
 import logo from '../../assets/images/logo.png';
+import './header.scss';
 
-// Component
-const Header = ({ isAuth }) => {
+const Header = ({ updateUI }) => {
 
   const [expanded, setExpanded] = useState(false);
 
@@ -55,7 +49,7 @@ const Header = ({ isAuth }) => {
             <Nav>
 
               {/* LogOn : display if disconnected / hidden if connected */}
-              {(isAuth !== true) ?
+              {(updateUI !== true) ?
                 <Link to="/signup" className="text-secondary text-decoration-none py-2" onClick={() => setExpanded(false)}>
                   <span className="navitem">
                     <span className="navitem-img">
@@ -71,7 +65,7 @@ const Header = ({ isAuth }) => {
               }
 
               {/* LogIn : display if disconnected / hidden if connected */}
-              {(isAuth !== true) ?
+              {(updateUI !== true) ?
                 <Link to="/signin" className="text-secondary text-decoration-none py-2" onClick={() => setExpanded(false)}>
                   <span className="navitem">
                     <span className="navitem-img">
@@ -87,7 +81,7 @@ const Header = ({ isAuth }) => {
               }
 
               {/* LogOut : display if connected / hidden if disconnected */}
-              {(isAuth === true) ?
+              {(updateUI === true) ?
                 <span className="text-secondary text-decoration-none py-2">
                   <span className="navitem" onClick={() => {
                     const confirmBox = window.confirm("Voulez-vous vous déconnecter ?")
