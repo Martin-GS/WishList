@@ -87,6 +87,7 @@ function CreateList() {
                 className="input"
                 id="title"
                 placeholder="Titre"
+                maxLength={45}
                 value={title}
                 onChange={event => setTitle(event.target.value)}
               />
@@ -102,6 +103,7 @@ function CreateList() {
                 className="input"
                 id="coment"
                 placeholder="Commentaire"
+                maxLength={255}
                 value={coment}
                 onChange={(event) => setComent(event.target.value)}
               />

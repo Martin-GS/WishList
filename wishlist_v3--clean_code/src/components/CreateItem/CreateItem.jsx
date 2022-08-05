@@ -90,6 +90,7 @@ const CreateItem = () => {
                 className="input"
                 id="title"
                 placeholder="Titre"
+                maxLength={45}
                 value={title}
                 onChange={(event) => setTitle(event.target.value)}
               />
@@ -105,6 +106,7 @@ const CreateItem = () => {
                 className="input"
                 id="url"
                 placeholder="Lien (URL)"
+                maxLength={255}
                 value={url}
                 onChange={(event) => setUrl(event.target.value)}
               />
@@ -120,6 +122,7 @@ const CreateItem = () => {
                 className="input"
                 id="coment"
                 placeholder="Commentaire"
+                maxLength={255}
                 value={coment}
                 onChange={(event) => setComent(event.target.value)}
               />
