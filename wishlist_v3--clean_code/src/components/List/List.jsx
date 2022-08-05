@@ -8,7 +8,10 @@ import { InlineShareButtons } from 'sharethis-reactjs';
 import { getToken } from '../../utils/auth';
 import DeleteItem from './DeleteItem';
 import Loader from '../Loader/Loader';
+import itemdefaultbackground from '../../assets/images/item-default_background.jpg';
+import itemdefaultthumbnail from '../../assets/images/item-default_thumbnail.jpg';
 import './list.scss';
+
 
 function List() {
 
@@ -104,20 +107,29 @@ function List() {
 
                 <div className="card shadow">
                   <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    <img src={item.image_url} alt={item.id} className="item-image-thumbnail" />
+                    {(item.image_url === "") ?
+                      <img src={itemdefaultthumbnail} alt={item.id} className="item-image-thumbnail" />
+                      :
+                      <img src={item.image_url} alt={item.id} className="item-image-thumbnail" />
+                    }
                   </a>
                   <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    <div
-                      className="item-image-url"
-                      style={{
-                        backgroundImage: `url(${item.image_url})`,
-                        width: '100%',
-                        backgroundRepeat: 'no-repeat',
-                        filter: 'blur(1.2px)',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center center',
-                      }} >
-                    </div>
+                    {(item.image_url === "") ?
+                      <div
+                        className="item-image-background"
+                        style={{
+                          backgroundImage: `url(${itemdefaultbackground})`,
+                          filter: 'blur(0px)',
+                        }} >
+                      </div>
+                      :
+                      <div
+                        className="item-image-background"
+                        style={{
+                          backgroundImage: `url(${item.image_url})`,
+                        }} >
+                      </div>
+                    }
                   </a>
                   <div className="m-2">
                     <h3 className="fs-5">
