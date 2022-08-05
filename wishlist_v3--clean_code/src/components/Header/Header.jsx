@@ -1,17 +1,40 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import * as Icon from 'react-feather';
+import LogoutConfirmation from './LogoutConfirmation';
+import { isUserAuthenticated, deAuthenticateUser } from '../../utils/auth';
 import logo from '../../assets/images/logo.png';
 import './header.scss';
 
-const Header = ({ updateUI }) => {
+const Header = () => {
 
+  const [isAuth, setIsAuth] = useState(isUserAuthenticated);
+  const [logoutConfirmationModal, setLogoutConfirmationModal] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
+  let location = useLocation();
+
+  React.useEffect(() => {
+    setIsAuth(isUserAuthenticated);
+  }, [location]);
+
+  const showConfirmationModal = () => {
+    setLogoutConfirmationModal(true);
+  };
+
+  const hideConfirmationModal = () => {
+    setLogoutConfirmationModal(false);
+  };
+
+  const submitLogout = () => {
+    logout();
+    setLogoutConfirmationModal(false);
+  };
+
   const logout = () => {
-    localStorage.clear();
-    window.location.href = '/';
+    deAuthenticateUser();
+    window.location.href = '/'
   };
 
   return (
@@ -49,7 +72,7 @@ const Header = ({ updateUI }) => {
             <Nav>
 
               {/* LogOn : display if disconnected / hidden if connected */}
-              {(updateUI !== true) ?
+              {(isAuth !== true) ?
                 <Link to="/signup" className="text-secondary text-decoration-none py-2" onClick={() => setExpanded(false)}>
                   <span className="navitem">
                     <span className="navitem-img">
@@ -65,7 +88,7 @@ const Header = ({ updateUI }) => {
               }
 
               {/* LogIn : display if disconnected / hidden if connected */}
-              {(updateUI !== true) ?
+              {(isAuth !== true) ?
                 <Link to="/signin" className="text-secondary text-decoration-none py-2" onClick={() => setExpanded(false)}>
                   <span className="navitem">
                     <span className="navitem-img">
@@ -81,12 +104,9 @@ const Header = ({ updateUI }) => {
               }
 
               {/* LogOut : display if connected / hidden if disconnected */}
-              {(updateUI === true) ?
+              {(isAuth === true) ?
                 <span className="text-secondary text-decoration-none py-2">
-                  <span className="navitem" onClick={() => {
-                    const confirmBox = window.confirm("Voulez-vous vous déconnecter ?")
-                    if (confirmBox === true) { logout() }
-                  }}>
+                  <span className="navitem" onClick={() => showConfirmationModal()}>
                     <span className="navitem-img">
                       <Icon.LogOut size="1.7em" />
                     </span>
@@ -98,6 +118,12 @@ const Header = ({ updateUI }) => {
                 :
                 <div></div>
               }
+
+              <LogoutConfirmation
+                showModal={logoutConfirmationModal}
+                confirmModal={submitLogout}
+                hideModal={hideConfirmationModal}
+              />
 
               <hr />
 

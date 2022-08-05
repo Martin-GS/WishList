@@ -6,7 +6,7 @@ import AlertError from '../AlertError/AlertError';
 import Loader from '../Loader/Loader';
 import { isUserAuthenticated, authenticateUser } from '../../utils/auth';
 
-function SignUp({ replaceValueIfAuth }) {
+function SignUp() {
 
   const [isAuth, setIsAuth] = useState(isUserAuthenticated());
   const [details, setDetails] = useState({ pseudo: '', email: '', password: '' });
@@ -23,7 +23,6 @@ function SignUp({ replaceValueIfAuth }) {
       .then((res) => {
         authenticateUser(res.data.token);
         setIsAuth(true);
-        replaceValueIfAuth(true);
       })
       .catch((err) => {
         setError(<AlertError />);

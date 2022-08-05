@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import PrivateRoutes from '../../utils/PrivateRoutes';
@@ -19,17 +19,11 @@ import './app.scss';
 
 function App() {
 
-  const [updateUI, setUpdateUI] = useState([]);
-
-  const replaceValueIfAuth = (value) => {
-    setUpdateUI(value);
-  };
-
   return (
 
     <div className="app">
 
-      <Header updateUI={updateUI} />
+      <Header />
 
       <Container fluid>
 
@@ -38,8 +32,8 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
           <Route path='/legal' element={<Legal />} />
-          <Route path='/signin' element={<SignIn replaceValueIfAuth={replaceValueIfAuth} />} />
-          <Route path='/signup' element={<SignUp replaceValueIfAuth={replaceValueIfAuth} />} />
+          <Route path='/signin' element={<SignIn />} />
+          <Route path='/signup' element={<SignUp />} />
           <Route element={<PrivateRoutes />}>
             <Route path='/lists' element={<Lists />} />
             <Route path='/lists/createlist' element={<CreateList />} />
