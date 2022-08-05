@@ -1,7 +1,13 @@
 @use '../../styles/vars';
 
 .legal {
+
+  li {
+    list-style: none;
+  }
+
   .infos {
     text-align: center;
   }
+
 }

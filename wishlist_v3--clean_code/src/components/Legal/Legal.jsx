@@ -22,16 +22,20 @@ function Legal() {
 
             <ul>
               <li>
-                Martin GS
+                <a href="https://github.com/Martin-GS" target="_blank" rel="noopener noreferrer">Martin GS</a>
+
               </li>
               <li>
-                Nicolas Bzn.
+                <a href="https://github.com/NicolasBNZ" target="_blank" rel="noopener noreferrer">Nicolas Bzn.</a>
+
               </li>
               <li>
-                Nicolas Brd.
+                <a href="https://github.com/Nicolas-B06" target="_blank" rel="noopener noreferrer">Nicolas Brd.</a>
+
               </li>
               <li>
-                Thomas P.
+                <a href="https://github.com/gibsonshelby" target="_blank" rel="noopener noreferrer">Thomas P.</a>
+
               </li>
             </ul>
 

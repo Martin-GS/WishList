@@ -103,10 +103,10 @@ function List() {
               <div key={item.id} className="col-12 col-md-6 col-lg-4 mb-4 mx-auto">
 
                 <div className="card shadow">
-                  <Link to={item.url} target="_blank">
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
                     <img src={item.image_url} alt={item.id} className="item-image-thumbnail" />
-                  </Link>
-                  <Link to={{ pathname: item.url }} target="_blank">
+                  </a>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
                     <div
                       className="item-image-url"
                       style={{
@@ -118,12 +118,18 @@ function List() {
                         backgroundPosition: 'center center',
                       }} >
                     </div>
-                  </Link>
+                  </a>
                   <div className="m-2">
-                    <Link className="text-decoration-none" to={{ pathname: item.url }} target="_blank">
-                      <h3><a href={`${item.url}`} className="link-dark fs-5 text-decoration-none">{item.title}</a></h3>
-                      <span className="link-secondary fs-6">{item.coment}</span>
-                    </Link>
+                    <h3 className="fs-5">
+                      <a className="link-dark text-decoration-none" href={item.url} target="_blank" rel="noopener noreferrer">
+                        {item.title}
+                      </a>
+                    </h3>
+                    <span className="fs-6">
+                      <a className="link-secondary text-decoration-none" href={item.url} target="_blank" rel="noopener noreferrer">
+                        {item.coment}
+                      </a>
+                    </span>
                   </div>
                 </div>
 
