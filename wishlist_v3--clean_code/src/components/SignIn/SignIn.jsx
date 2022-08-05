@@ -69,9 +69,13 @@ function SignIn({ replaceValueIfAuth }) {
 
           <Form onSubmit={submitHandler}>
 
-            {
-              (error !== '') ? (<div className="error">{error}</div>) : ''
-            }
+            {(error !== '') ? (<div className="error">{error}</div>) : ''}
+
+            <div className="col text-center">
+              <Form.Text className="text-center">
+                * Champs obligatoires
+              </Form.Text>
+            </div>
 
             <Form.Group className="my-4" controlId="formBasicEmail">
               <Form.Label>Adresse eMail</Form.Label>

@@ -72,12 +72,16 @@ function CreateList() {
 
           <Form className="form">
 
-            {
-              (error !== '') ? (<div className="error">{error}</div>) : ''
-            }
+            {(error !== '') ? (<div className="error">{error}</div>) : ''}
+
+            <div className="col text-center">
+              <Form.Text className="text-center">
+                * Champs obligatoires
+              </Form.Text>
+            </div>
 
             <Form.Group className="my-4">
-              <Form.Label>Titre</Form.Label>
+              <Form.Label>Titre *</Form.Label>
               <Form.Control
                 type="text"
                 className="input"
@@ -92,7 +96,7 @@ function CreateList() {
             </Form.Group>
 
             <Form.Group className="my-4">
-              <Form.Label>Commentaire</Form.Label>
+              <Form.Label>Commentaire *</Form.Label>
               <Form.Control
                 type="text"
                 className="input"

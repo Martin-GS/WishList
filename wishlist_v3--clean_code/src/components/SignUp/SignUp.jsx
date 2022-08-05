@@ -67,8 +67,14 @@ function SignUp({ replaceValueIfAuth }) {
 
             {(error !== '') ? (<div className="error">{error}</div>) : ''}
 
+            <div className="col text-center">
+              <Form.Text className="text-center">
+                * Champs obligatoires
+              </Form.Text>
+            </div>
+
             <Form.Group className="my-4" controlId="formBasicEmail">
-              <Form.Label>Nom d'utilisateur</Form.Label>
+              <Form.Label>Nom d'utilisateur *</Form.Label>
               <Form.Control
                 className="input"
                 type="text"
@@ -83,7 +89,7 @@ function SignUp({ replaceValueIfAuth }) {
             </Form.Group>
 
             <Form.Group className="my-4" controlId="formBasicEmail">
-              <Form.Label>Adresse eMail</Form.Label>
+              <Form.Label>Adresse eMail *</Form.Label>
               <Form.Control
                 className="input"
                 type="email"
@@ -98,7 +104,7 @@ function SignUp({ replaceValueIfAuth }) {
             </Form.Group>
 
             <Form.Group className="my-4" controlId="formBasicPassword">
-              <Form.Label>Mot de passe</Form.Label>
+              <Form.Label>Mot de passe *</Form.Label>
               <Form.Control
                 className="input"
                 type="password"

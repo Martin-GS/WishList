@@ -18,7 +18,7 @@ const AlertError = () => {
           <Modal.Title>Une erreur s'est produite.</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Veuillez remplir tous les champs, et vous assurer que les informations entrées sont correctes.</p>
+          <p>Veuillez remplir tous les champs et vous assurer que les informations entrées sont correctes.</p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>
