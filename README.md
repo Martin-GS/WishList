@@ -2,9 +2,9 @@
 
 ## Introduction
 
-WishList est une application web optimisée pour les appareils mobiles (mobile-first). Elle permet de créer des listes d’articles et d'importer leurs données depuis les sites marchands.
+WishList est une application web optimisée pour les appareils mobiles (*mobile-first*). Elle permet de créer des listes d’articles en important les images depuis les sites marchands.
 
-Application développée, en principe, pour un projet de fin d'études ([v1](./wishlist_v1--apotheose/)) en [Développement Web et Web Mobile](https://oclock.io/formations/developpeur-web-fullstack-javascript). Modifiée/optimisée ensuite ([v2](./wishlist_v2--titre_pro/)) pour présentation lors du passage devant un jury ([Titre Professionnel](https://www.francecompetences.fr/recherche/rncp/31114/)). Et modifiée une deuxième fois ([v3](./wishlist_v3--clean_code/)) pour mettre en pratique mes acquis et ajout dans mon portfolio ([martin.gs](https://martin.gs)).
+Application développée, en principe, pour un projet de fin d'études en [Développement Web et Web Mobile](https://oclock.io/formations/developpeur-web-fullstack-javascript) ([v1](./wishlist_v1--apotheose/)). Modifiée ensuite ([v2](./wishlist_v2--titre_pro/)) pour présentation lors du passage devant un jury ([Titre Professionnel](https://www.francecompetences.fr/recherche/rncp/31114/)). Et modifiée une deuxième fois ([v3](./wishlist_v3--clean_code/)) pour corriger des *bugs* et optimiser le code afin de l'ajouter à mon portfolio ([martin.gs](https://martin.gs)).
 
 ---
 
@@ -33,8 +33,10 @@ Les différentes versions de l'application ont été publiées pour montrer l'av
   - Juillet 2022
   - Front (Client) :
     - développé par [Martin-GS](https://github.com/Martin-GS)
+    - Mises à niveau : de React v17 vers v18, et de React-Router v5 vers v6
     - Reprise, révision et optimisation du code.
-    - Correction de bugs et de certaines fonctionnalités (login, cycle de vie des composants, etc).
+    - Réécriture de plusieurs fonctionnalités (menu de navigation dynamique, formulaires, connexion et déconnexion (pages protégées), ajout et suppression d'articles, etc).
+    - [MVP (Minimum Viable Product)](doc/Gestion_de_projet/02-Cahier_des_Charges.md) terminé et [déploiement de l'application](https://wishlist.martin.gs).
 
 ---
 

@@ -9,16 +9,15 @@
 ### Technologies utilisées
 
 - [HTML](https://www.w3.org/html/) + [CSS](https://www.w3.org/Style/CSS/) / [SCSS (Sass)](https://sass-lang.com/) + [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript) / [JSX](https://fr.reactjs.org/docs/introducing-jsx.html)
-- [React](https://reactjs.org/) (bibliothèque JavaScript)
-- [ReactDOM](https://fr.reactjs.org/docs/react-dom.html) (injection des composants React dans le DOM)
-- [prop-types](https://github.com/facebook/prop-types) (validation de props au sein du JSX)
-- [React-Router](https://reactrouter.com/) (bibliothèque de routage (routing) standard)
-- Modèle React École
-- [Bootstrap](https://getbootstrap.com/) (framework Front-End)
-- [React-Bootstrap](https://react-bootstrap.github.io) (framework Front-End)
-- [React Feather Icons](https://feathericons.com/) (collection d'icônes open source pour React.js)
-- [Share This](https://github.com/sharethis-github/sharethis-reactjs) (boutons de partage sur les réseaux sociaux pour React)
-- [Vercel](https://vercel.com) (plateforme de déploiement et de collaboration)
+- [React](https://reactjs.org/)
+- [ReactDOM](https://fr.reactjs.org/docs/react-dom.html)
+- [prop-types](https://github.com/facebook/prop-types)
+- [React-Router](https://reactrouter.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [React-Bootstrap](https://react-bootstrap.github.io)
+- [React Feather Icons](https://feathericons.com/)
+- [Share This](https://github.com/sharethis-github/sharethis-reactjs)
+- [Vercel](https://vercel.com)
 
 ### Scripts Yarn & NPM
 

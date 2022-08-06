@@ -9,9 +9,9 @@ Application de création, gestion et partage de listes d'items/articles, avec la
 ### Besoins (problèmes auxquels répond le projet)
 
 - centraliser les articles/items trouvés à un seul endroit
-- creer, modifier et supprimer les listes en un clic
+- créer, modifier et supprimer les listes en un clic
 - partager les listes
-- créer des listes pour des evenements spécifiques (mariage, naissance, etc)
+- créer des listes pour des événements spécifiques (mariage, naissance, etc)
 - listes "simples" de courses (qui enregistre tous les articles déjà achetés pour pouvoir les réutiliser)
 
 ### Objectifs (solutions qu'apporte le projet)
@@ -21,25 +21,28 @@ Application de création, gestion et partage de listes d'items/articles, avec la
 - éviter les oublis et les achats inutiles
 - lister les objets qu'on trouve pour nous mêmes ou quelqu'un
 - partager les articles trouvés
-- créer des listes communes (groupe de personnes) pour offir des cadeaux à une personne
+- créer des listes communes (groupe de personnes) pour offrir des cadeaux à une personne
 
 ### Cible
 
-Application généraliste, pour madame et monsieur tout le monde, dès le petit de 9 ans à la mamie de 90.
+Application généraliste, pour madame et monsieur tout le monde, dès le petit de 10 ans à la mamie de 70.
 
 ## 2. Fonctionnalités
 
 ### Le MVP (Minimum Viable Product)
 
-- Accès au compte
-- Gestion des listes
-- Gestion des items (édition unitaire)
-- Gestion des types d’item
-  - Transformation de l’url
+- Accéder au site
+- S'inscrire
+- Accéder au compte
+- Créer des listes
+- Créer des items (articles)
+  - récupérer l'image de l'article
+  - l'article renvoie vers le site marchand
 - Accéder aux mentions légales
+- Accéder à la page *about*
 - Accéder à la page de contact
 
-### Évolutions potentielles
+### Évolutions possibles
 
 - Gestion du profil utilisateur
   - édition du compte
@@ -67,10 +70,14 @@ Application généraliste, pour madame et monsieur tout le monde, dès le petit 
 
 ### API/Back (v1)
 
-- Node
-- express
-- joy
-- sqitch
+- [Node](https://nodejs.org)
+- [Express](https://expressjs.com)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Sqitch](https://sqitch.org/)
+- [Redis](https://redis.io/)
+- [Joy](https://joi.dev/)
+- [JWT](https://jwt.io/)
+- [url-metadata](https://github.com/laurengarcia/url-metadata)
 
 ### Client/Front (v3)
 
@@ -89,68 +96,49 @@ Application généraliste, pour madame et monsieur tout le monde, dès le petit 
 - [React Feather Icons](https://feathericons.com/) (collection d'icônes open source pour React.js)
 - [Share This](https://github.com/sharethis-github/sharethis-reactjs) (boutons de partage sur les réseaux sociaux pour React)
 - [Vercel](https://vercel.com) (plateforme de déploiement et de collaboration)
-- [Visual Studio Code](https://code.visualstudio.com/) (éditeur)
-- React Dev Tools (pour [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) et [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/))
 
-## 4. Navigateurs compatibles
-
-Application **Mobile first** avec compatibilité desktop.
-
-## 5. Arborescence et Routes
-
-cf [03-Arborescence_et_routes.pdf](./03-Arborescence_et_routes.pdf)
-
-### Arborescence de l'application (le chemin de l'utilisateur)
+## 4. Arborescence de l'application (le chemin de l'utilisateur)
 
 - Page d'accueil
   - Utilisateur non enregistré
     - Page d’inscription
   - Utilisateur enregistré
     - page de connexion
-    - page profil
-    - Page de connexion
     - page des listes
-    - page d'une liste : liste des items/articles
+    - page d'une liste : liste des articles
 - Page Mentions légales
 - Formulaire de contact
-- page 404
+- page 404 (*NotFound*)
 
 ### Routes prévues
 
 - Accueil : /
 - Inscription : /signup
 - Connexion : /signin
-- Profil administrateur : /admin/profile
-- Profil utilisateur : /userName/profile
-- Listes : /userName/lists
-- une liste : /userName/listID
+- Listes : /lists
+- une liste : /list/id
 - Mentions légales : /legal
 - Contact : /contact
 - Page 404 : /notfound
 
-## 6. User stories
+## 5. User stories
 
-|En tant que ...|J'ai besoin de ...|Afin de ...
-|---|---|---
-|visiteur|consulter la page d'accueil|
-|visiteur|pouvoir m'inscrire|avoir un compte et créer des listes
-|visiteur|accéder à la page contact|entrer en contact avec l’administrateur
-|visiteur|accéder à la page mentions légales|prendre connaissance des mentions légales
-|utilisateur|me connecter à mon compte|accéder à la page des listes
-|utilisateur|accéder à mon profil|consulter mes informations
-|utilisateur|pouvoir modifier mes infos persos|le mettre à jour
-|utilisateur|me déconnecter de mon compte|fermer ma session
-|utilisateur|pouvoir supprimer mon compte|ne plus faire partie des listes
-|utilisateur|créer à une liste|ranger ses idées d’item
-|utilisateur|accéder à une liste|visualiser
-|utilisateur|modifier une liste|mettre à jour
-|utilisateur|supprimer une liste|supprimer
-|utilisateur|créer un item (en texte simple, en url)|l’ajouter à liste
-|utilisateur|accéder à un item|visualiser
-|utilisateur|modifier un item|mettre à jour
-|utilisateur|supprimer un item|supprimer
+| En tant que ... | J'ai besoin de ...                 | Afin de ...                               |
+| --------------- | ---------------------------------- | ----------------------------------------- |
+| visiteur        | consulter la page d'accueil        |                                           |
+| visiteur        | pouvoir m'inscrire                 | avoir un compte et créer des listes       |
+| visiteur        | accéder à la page contact          | entrer en contact avec l’administrateur   |
+| visiteur        | accéder à la page mentions légales | prendre connaissance des mentions légales |
+| utilisateur     | me connecter à mon compte          | accéder à la page des listes              |
+| utilisateur     | me déconnecter de mon compte       | fermer ma session                         |
+| utilisateur     | créer à une liste                  | ranger ses idées d’item                   |
+| utilisateur     | accéder à une liste                | visualiser                                |
+| utilisateur     | supprimer une liste                | supprimer                                 |
+| utilisateur     | créer un item                      | l’ajouter à liste                         |
+| utilisateur     | accéder à un item                  | visualiser                                |
+| utilisateur     | supprimer un item                  | supprimer                                 |
 
-## 7. Rôles
+## 6. Rôles
 
 - Product owner : [Martin GS](https://github.com/Martin-GS)
 - Scrum dev : [Nicolas Bzn](https://github.com/NicolasBNZ)

@@ -24,7 +24,7 @@
 - [React-Feather-Icons](https://feathericons.com/)
 - [Share This](https://github.com/sharethis-github/sharethis-reactjs)
 
-### Scripts
+### Scripts (create-react-app)
 
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 > 
@@ -95,7 +95,7 @@ Se référer à l'article [GitHub : "Ignoring files"](https://help.github.com/ar
 
 1. Exécuter `npm install react-feather`
 2. L'importer dans le fichier : `import * as Icon from 'react-feather';`
-3. Ajouter la balise souhaitée pour afficher l'icône dans le composant : `<Icon.User size="1.5rem" />`
+3. Ajouter la balise souhaitée pour afficher l'icône dans le composant : `<Icon.User size="1.5em" />`
 
 ## Preview
 

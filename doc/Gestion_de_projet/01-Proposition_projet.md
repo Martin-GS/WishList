@@ -55,18 +55,18 @@ Alors, pour répondre à ces besoins, on pourrait imaginer une application qui p
   - peut être partagée
   - peut être commentée par les personnes y ayant accès
 - __les items d'une liste__ :
-  - peuvent être supprimés ou "cochés" par le proprietaire de la liste
+  - peuvent être supprimés ou "cochés" par le propriétaire de la liste
   - peuvent être "cochés" par les "invité"
   - "doivent" avoir un titre
   - "pourraient" avoir une description, une image, un lien, une taille (vêtements), etc
-  - en ajoutant un lien vers un article (sur le site marchant), afficher automatiquement le titre, l'image et le prix (je ne sais pas si c'est possible "à notre niuveau", mais je sais que certains sites fonctionnent comme ça)
+  - en ajoutant un lien vers un article (sur le site marchant), afficher automatiquement le titre, l'image et le prix (je ne sais pas si c'est possible "à notre niveau", mais je sais que certains sites fonctionnent comme ça)
 
 ##### Users
 
 - __Visiteurs__
   - accéder à la page d'accueil
   - contacter l'administrateur
-  - s’inscrire et se desinscrire
+  - s’inscrire et se désinscrire
 - __Utilisateurs__
   - se connecter et se déconnecter
   - modifier son profil (pseudo, image, commentaire)
@@ -99,11 +99,11 @@ Cela dépendra des objectifs : si l'équipe part sur une application plutôt "si
 
 ## 2 exemples d'utilisation
 
-Voici **deux exemples** qui pourront donner une idée plus précise de l'utilisté d'une telle application, car lorsqu'on parle de _wishlist_, on a tendance a penser juste à une _liste de cadeaux_.
+Voici **deux exemples** qui pourront donner une idée plus précise de l'utilité d'une telle application, car lorsqu'on parle de _wishlist_, on a tendance a penser juste à une _liste de cadeaux_.
 
 Chez nous on a crée 2 listes sur l'app **_Google Keep_**, qu'on a partagées avec la famille.
 
-Dans la première liste, qu'on nommera **WishList** tout court  nous mettons :
+Dans la première liste, qu'on nommera **WishList** tout court nous mettons :
 
 - les articles qu'on trouve en magasin ou sur internet qui nous plaisent (avec les liens respectifs si possible)
 MAIS aussi :
@@ -116,7 +116,8 @@ MAIS aussi :
 - ...
 
 La deuxième liste (qu'on a nommé **Courses**) est beaucoup plus simple :
-- on y ajoute les articles pour la maison à acheter au supermarché (des citrons pour faire un  lemon-pie le weekend, de l'essuie-tout  car il ne reste qu'un rouleau, le shampoing qui commence à se vider........)
+
+- on y ajoute les articles pour la maison à acheter au supermarché (des citrons pour faire une tarte le week-end, de l'essuie-tout  car il ne reste qu'un rouleau, le shampoing qui commence à se vider........)
 - la liste à cocher permet de ne pas les supprimer. Alors, on n'a qu'à décocher un article lorsqu'il faut en racheter.
 - Au marche du samedi, au au supermarché, on n'a qu'a lancer Google Keep pour voir les articles dont on a besoin, pour ne rien oublier !
 
@@ -126,4 +127,4 @@ Ces exemples sont là juste pour donner une idée des possibilités qu'une telle
 - liste de courses
 - liste de naissance/mariage
 - liste pre-vacances
-- etc etc etc
+- ...

@@ -2,4 +2,4 @@
 
 ## Journal personnel
 
-../WishList_v1--Apotheose/doc/carnet_de_bord_Martin-GS/README.md
+[WishList v1 : Carnet de bord - Martin GS](../../wishlist_v1--apotheose/carnet_de_bord-Martin-GS/README.md)
