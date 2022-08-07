@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
+import SignUpConfirmation from './SignUpConfirmation';
 import AlertError from '../AlertError/AlertError';
 import Loader from '../Loader/Loader';
 import { isUserAuthenticated, authenticateUser } from '../../utils/auth';
@@ -10,6 +11,7 @@ function SignUp() {
 
   const [isAuth, setIsAuth] = useState(isUserAuthenticated());
   const [details, setDetails] = useState({ pseudo: '', email: '', password: '' });
+  const [displayConfirmationModal, setDisplayConfirmationModal] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -22,7 +24,7 @@ function SignUp() {
     })
       .then((res) => {
         authenticateUser(res.data.token);
-        setIsAuth(true);
+        showConfirmationModal();
       })
       .catch((err) => {
         setError(<AlertError />);
@@ -30,6 +32,15 @@ function SignUp() {
       .finally(() => {
         setLoading(false);
       });
+  };
+
+  const showConfirmationModal = () => {
+    setDisplayConfirmationModal(true);
+  };
+
+  const submitConfirmationModal = () => {
+    setDisplayConfirmationModal(false);
+    setIsAuth(true);
   };
 
   if (isAuth) {
@@ -128,7 +139,12 @@ function SignUp() {
               </div>
 
               <div className="col text-center">
-                <Button className="btn btn-primary text-white shadow my-4" variant="primary" type="submit">
+                <Button
+                  className="btn btn-primary text-white shadow my-4"
+                  variant="primary"
+                  type="submit"
+                // onClick={() => showConfirmationModal()}
+                >
                   Valider
                 </Button>
               </div>
@@ -145,6 +161,11 @@ function SignUp() {
         </div>
 
       </div>
+
+      <SignUpConfirmation
+        displayModal={displayConfirmationModal}
+        submitConfirmation={submitConfirmationModal}
+      />
 
     </div>
 

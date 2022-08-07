@@ -69,7 +69,7 @@
 
 [manifest.json](./wishlist_v3/../public/manifest.json) fournit les metadata qui sont utilisées lorsque l'application est installée sur un mobile ou un ordinateur.
 
-Plus d'informations [ici](https://developer.mozilla.org/en-US/docs/Web/Manifest) et [là](https://developers.google.com/web/fundamentals/web-app-manifest/)
+Plus d'informations [sur le site MDN](https://developer.mozilla.org/fr/docs/Web/Manifest) et [sur le site Google (EN)](https://developers.google.com/web/fundamentals/web-app-manifest/)
 
 ### .gitignore
 

@@ -50,6 +50,7 @@ const DeleteItem = ({ itemObj, listId, loadLists }) => {
 
   return (
     <>
+
       <Button
         className="delete-item bg-light border-0"
         onClick={() => showDeleteModal()}
@@ -62,6 +63,7 @@ const DeleteItem = ({ itemObj, listId, loadLists }) => {
         confirmModal={submitDelete}
         hideModal={hideConfirmationModal}
       />
+
     </>
   );
 };
