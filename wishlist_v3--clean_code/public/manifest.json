@@ -1,8 +1,9 @@
 {
-  "short_name": "WishList",
   "name": "WishList",
-  "description": "WishList • Toutes vos envies à portée de main !",
+  "short_name": "WishList",
+  "description": "WishList • Toutes vos envies à portée de main ! • Martin GS",
   "start_url": ".",
+  "lang": "fr",
   "display": "standalone",
   "theme_color": "#2d3142",
   "background_color": "#ffffff",
@@ -13,12 +14,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo-wishlist-192.png",
+      "src": "wishlist-logo-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo-wishlist-512.png",
+      "src": "wishlist-logo-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
