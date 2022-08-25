@@ -8,8 +8,6 @@ WishList est une application web optimisée pour les appareils mobiles (*mobile-
 
 Application développée, en principe, pour un projet de fin d'études en [Développement Web et Web Mobile](https://oclock.io/formations/developpeur-web-fullstack-javascript) ([v1](./wishlist_v1--apotheose/)). Modifiée ensuite ([v2](./wishlist_v2--titre_pro/)) pour présentation lors du passage devant un jury ([Titre Professionnel](https://www.francecompetences.fr/recherche/rncp/31114/)). Et modifiée une deuxième fois ([v3](./wishlist_v3--clean_code/)) pour corriger des *bugs* et optimiser le code afin de *valider* le MVP et ([déployer l'application](https://wishlist.martin.gs)).
 
----
-
 ## Versions
 
 Les différentes versions de l'application ont été publiées pour montrer l'avancement de mon apprentissage/perfectionnement ; pour cela leur code doit servir **uniquement** comme point de comparaison entre les différentes versions.
@@ -39,8 +37,6 @@ Les différentes versions de l'application ont été publiées pour montrer l'av
     - Reprise, révision et optimisation du code.
     - Réécriture de plusieurs fonctionnalités (menu de navigation dynamique, formulaires, connexion et déconnexion (pages protégées), ajout et suppression d'articles, etc).
     - [MVP (Minimum Viable Product)](doc/Gestion_de_projet/02-Cahier_des_Charges.md) terminé et [déploiement de l'application](https://wishlist.martin.gs).
-
----
 
 ## Captures d'écran
 
