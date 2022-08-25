@@ -6,7 +6,6 @@
   "lang": "fr",
   "display": "standalone",
   "theme_color": "#2d3142",
-  "background_color": "#ffffff",
   "icons": [
     {
       "src": "favicon.ico",
